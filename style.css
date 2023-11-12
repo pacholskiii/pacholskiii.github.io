@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,600&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -18,13 +18,12 @@ a{
 }
 
 body{
-    /* font-family: 'Poppins', sans-serif;
-    background-color: red;
-    background-color: rgba(130, 226, 241, 1);
-    background-image: radial-gradient(circle, rgba(130, 226, 241, 1) 0%, rgba(46, 99, 93, 1) 100%); */
-    ddd
-    display: d;
+    font-family: 'Poppins', sans-serif;
+
+    background-color: rgba(16, 109, 121, 1);
+    background-image: linear-gradient(175deg, rgba(16, 109, 121, 1) 17%, rgba(62, 136, 124, 1) 76%);
 }
+
 
 nav{
    
@@ -35,14 +34,12 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-logo{
     max-width: 200px;
     margin-right: auto;;
-    
-    
 }
 
 .nav-links{
@@ -53,14 +50,24 @@ nav{
     gap: 3rem;
     font-size: 20px;
     justify-items: center;
+    width: 400px;
+    margin-right: 200px;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    border-radius: 150px 40px 150px 40px;
+    background-color: rgba(140, 165, 165, 1);
+background-image: linear-gradient(252deg, rgba(140, 165, 165, 1) 0%, rgba(124, 188, 191, 1) 88%);
+    
 }
 
 .link a{
+   
+   
     position: relative;
     padding-bottom: 0.75rem;
-    
     color: #fff;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 .link a:hover{
     font-size: 22px;
@@ -85,17 +92,86 @@ nav{
     justify-content: center;
     width: 45vw;
     height: 100vh;
-    margin-left: 150px;
-   float: left;
-    
+   float: left;   
+   color: #ffffffa2;  
+   
+   margin-left: 20px;  
 }
-.title h1{
-    margin-top: 150px;
-    font-size: 48px;
-}
-.img-section{
-    width: 25vw;
-    height: 100vh;
 
+.title h1{
+    margin-top: 180px;
+    font-size: 48px;
+    color: #fff;    
 }
+.title p{
+    font-size: 17px;
+}
+
+
+.img-section{
+    
+    width: 45vw;
+    height: 100vh;
+    float: left;
+}
+.card{
+    -webkit-box-shadow: 24px 24px 67px -7px rgba(119, 214, 202, 1);
+    -moz-box-shadow: 24px 24px 67px -7px rgba(119, 214, 202, 1);
+    box-shadow: 24px 24px 67px -7px rgba(119, 214, 202, 1);
+    background-color: rgba(255, 255, 255, 0.651);
+    position: absolute;
+    border-radius: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card h1{
+    margin-top: 12px;
+  
+}
+.c1{
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    font-size: 32px;
+    cursor: pointer;
+    
+    -webkit-transition: all 0.2s cubic-bezier(0.75, -0.6, 0.13, 1.22);
+}
+.c2{
+    font-size: 18px;
+    right: 600px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+   
+    -webkit-transition: all 0.2s cubic-bezier(0.75, -0.6, 0.13, 1.22);
+}
+.c3{
+    font-size: 28px;
+    width: 400px;
+    height: 400px;
+    top: 400px;
+    right: 350px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s cubic-bezier(0.75, -0.6, 0.13, 1.22);
+}
+.c1:hover{
+    font-size: 50px;
+    width: 420px;
+    height: 420px;
+}
+.c2:hover{
+    font-size: 28px;
+    width: 300px;
+    height: 300px;
+}
+.c3:hover{
+    width: 450px;
+    height: 450px;
+}
+
+
 
