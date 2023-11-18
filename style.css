@@ -74,8 +74,10 @@ nav{
     height: 70px;
     align-items: center;
     border-radius: 150px 40px 150px 40px;
-    background-color: rgba(93, 150, 208, 1);
-background-image: linear-gradient(168deg, rgba(93, 150, 208, 1) 10%, rgba(56, 126, 202, 1) 89%);
+    /* background-color: rgba(31, 89, 158, 1);
+    background-image: linear-gradient(90deg, rgba(31, 89, 158, 1) 0%, rgba(35, 106, 181, 1) 100%); */
+    background-color: rgba(31, 89, 158, 1);
+    background-image: linear-gradient(181deg, rgba(31, 89, 158, 1) 0%, rgba(24, 74, 132, 1) 100%);
         
 }
 
