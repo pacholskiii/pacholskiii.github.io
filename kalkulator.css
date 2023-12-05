@@ -139,6 +139,12 @@ h1{
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
+p {
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        color: #FFFFFF;
+        text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+}
 .obrazek{
     margin-top: 50px;;
 }
@@ -246,3 +252,4 @@ b{
     background-color: rgb(185, 32, 32);
 
 }
+
