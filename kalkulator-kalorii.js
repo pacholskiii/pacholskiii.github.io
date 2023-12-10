@@ -1,29 +1,29 @@
-let waga = document.querySelector("#waga");
-let wzrost = document.querySelector("#wzrost")
-let oblicz = document.querySelector(".oblicz");
-let wyniki = document.querySelector(".wyniki");
-let bmiSpan = document.querySelector(".bmi");
+let plec = document.querySelector("#plec");
+let wiek = document.querySelector("#wiek");
+let wzrost = document.querySelector("#wzrost");
+let masa = document.querySelector("#masa");
+let aktywnosc = document.querySelector("#aktywnosc");
+let cel = document.querySelector("#cel");
 
+let oblicz = document.querySelector("#oblicz");
 
-let weightValue;
-let heightValue;
-let bmi;
-
-oblicz.addEventListener("click", () =>{
-    weightValue = parseFloat(waga.value);
-    heightValue = parseFloat(wzrost.value) / 100;
-    bmi = weightValue / (Math.pow(heightValue, 2));
-    console.log(bmi);
-    
-    
-    if(isNaN(weightValue)  || isNaN(heightValue)){
-        wyniki.style.display = "block";
-        bmiSpan.innerHTML = "Podaj poprawne wartości"
+oblicz.addEventListener("click", () => {
+   
+    if(isNaN(wiek.value) || isNaN(wzrost.value) || isNaN(masa.value)){
+        oblicz.innerHTML = "Podaj poprawne wartości";
+        oblicz.style.fontSize = "18px";
     }
     else{
-        wyniki.style.display = "block";
-        bmiSpan.innerHTML = bmi.toFixed(2);
-    }
-    
-});
+        let plecValue = plec.value;
+        let wiekValue = wiek.value;
+        let wzrostValue = wzrost.value;
+        let masaValue = masa.value;
+        let aktywnoscValue = aktywnosc.value;
+        let celValue = cel.value;
 
+        console.log(celValue);
+
+    }
+   
+
+});

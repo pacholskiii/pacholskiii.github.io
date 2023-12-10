@@ -132,18 +132,22 @@ header .header p{
    height: 900px;
    
 }
-
+.info{
+    background-color: #d22d2d;
+    width: 100%;
+    height: 550px;
+}
 .footer{
     width: 100%;
-    height: 150px;
-    border-top: 2px solid white
+    height: 350px;
+   
 }
 .kalkulator{
     position: absolute;
     top: 870px;
     margin-left: 100px;;
-    width: 700px;
-    min-height: 500px;
+    width: 820px;
+    min-height: 580px;
     border-radius: 12px;
     background-color: #fff;
     -webkit-box-shadow: 9px 8px 24px -14px rgba(66, 68, 90, 1);
@@ -151,10 +155,27 @@ header .header p{
     box-shadow: 9px 8px 24px -14px rgba(66, 68, 90, 1);
     padding: 12px;
 }
+.kalkulator h1{
+    margin-bottom: 32px;
+    text-align: center;
+}
+.wyniki{
+    background-color: #fff;
+    width: 700px;
+    min-height: 580px;
+    position: absolute;
+    top: 870px;
+    right: 0;
+    margin-right: 100px;
+    border-radius: 12px;
+    display: none;
+}
 .pole{
     margin: 12px 0;
     font-size: 20px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
     
 }
 .pole label{
@@ -164,7 +185,45 @@ header .header p{
 .pola{
     display: flex;
     flex-direction: column;
-  
+    align-items: center;
     flex-wrap: wrap;
 }
 
+.pole-gora{
+    display: flex;
+   
+}
+.small{
+    width: 250px
+}
+.big{
+    width: 500px;
+}
+select, input{
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    border-radius: 12px;
+    margin-right: 24px;
+    padding: 8px
+}
+.button{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.button button{
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #e92323;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+.button:hover{
+    transform: scale(110%);
+}
