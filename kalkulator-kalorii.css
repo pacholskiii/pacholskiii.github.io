@@ -181,6 +181,7 @@ header .header p{
 .pole label{
     color: #d22d2d;
     font-weight: 600;
+    margin-bottom: 4px;
 }
 .pola{
     display: flex;
@@ -203,7 +204,8 @@ select, input{
     border: 1px solid rgba(0, 0, 0, 0.425);
     border-radius: 12px;
     margin-right: 24px;
-    padding: 8px
+    padding: 8px;
+   
 }
 .button{
     margin-top: 30px;
