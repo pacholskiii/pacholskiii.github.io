@@ -222,7 +222,7 @@ select, input{
     
     background-color: #fff;
     
-    width: 700px;
+    min-width: 700px;
     min-height: 580px;
     position: absolute;
     top: 870px;
@@ -242,10 +242,12 @@ select, input{
     display: flex;
     align-items: center;
     padding: 18px 0;
+    gap: 10px;
 }
 .calories img{
     width: 100px;
     height: 100px;
+  
 }
 .values img{
     width: 60px;
@@ -267,7 +269,14 @@ select, input{
 }
 .calories strong{
     font-size: 22px;
-    margin-right: 110px;
+    margin-right: 50px;
+}
+.calories .added{
+    background-color: rgba(240, 248, 255, 0.644);
+    padding: 8px 10px;
+    border-radius: 12px;
+   
+    color: rgb(36, 197, 36);
 }
 .calories span{
     color: #e92323;
