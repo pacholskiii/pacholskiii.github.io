@@ -23,7 +23,7 @@ a{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(226, 38, 38, 1);
+    background-color: rgba(226, 38, 38, 1); 
     background-image: linear-gradient(181deg, rgb(173, 28, 28) 0%, rgba(29, 32, 35, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -89,11 +89,10 @@ nav{
 
 .link a{
    
-   
+    transition: all 0.3s ease-in-out;
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
-    transition: all 0.3s ease-in-out;
 }
 .link a:hover{
     font-size: 22px;
@@ -135,15 +134,15 @@ main{
     margin-top: 100px;
     margin-bottom: 200px;
 }
-h1{
+/* h1{
     letter-spacing: 1px;
     margin-bottom: 12px;
-}
+} */
 p {
-        font-size: 30px;
+        /* font-size: 30px;
         font-family: 'Poppins', sans-serif;
         color: #FFFFFF;
-        text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+        text-shadow: 4px 2px 0px rgba(66, 68, 90, 1); */
 }
 .obrazek{
     margin-top: 50px;;
@@ -192,12 +191,13 @@ button:hover {
 .informacje{
    
     width: 100%;
-    min-height: 1000px;;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
-    
-  
     margin-bottom: 100px;
+    shape-outside: circle(50%);
+    justify-content: flex-start;
+    
 }
 .pin{
     
@@ -229,10 +229,11 @@ button:hover {
  .normy-bmi p{
     margin-top: 4px;
     color: white;
+    font-size: 30px;
 }
 .normy-bmi h1{
     color: white;
-    font-size: 48px;
+    font-size: 32px;
 }
 b{
     font-weight: 600;
@@ -256,7 +257,102 @@ b{
 }
 
 .normy-bmi-przycisk:hover {
-    background-color: rgb(153, 28, 28);
+ background-color: rgb(153, 28, 28); 
+
 }
 
+.kontener {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.kolumna {
+    
+    height: 400px;
+    width: 30%;
+    border-radius: 10px;
+    border: 3px solid rgb(236, 194, 194);
+    background-color: rgb(236, 194, 194);
+    padding: 10px;
+    margin: 0 150px;
+    text-align: center;
+
+}
+
+.kolumna2 {
+    
+    height: 400px;
+    width: 30%;
+    border-radius: 10px;
+    border: 3px solid rgb(236, 194, 194);
+    background-color: rgb(236, 194, 194);
+    padding: 10px;
+    margin: 0 150px;
+    text-align: center;
+
+}
+
+.kontener2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.kolumna-dol {
+    min-height: 400px;
+    width: 30%;
+    border-radius: 10px;
+    border: 3px solid rgb(236, 194, 194);
+    background-color: rgb(236, 194, 194);
+    padding: 10px;
+    margin: 0 150px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+.kontener p {
+    font-size: 28px;
+    margin-top: 30px;
+    display: none;
+}
+
+.kontener .oki:hover p{
+    display: flex;
+    flex-direction: column;
+}
+
+.kontener2 p {
+    font-size: 25px;
+    margin-top: 30px;
+    display: none;
+}
+
+.kontener2 .oki:hover p {
+    display: block;
+}
+.kontener2 .oki:hover {
+    display: flex;
+    flex-direction: column;
+}
+.oki {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.kontener .oki:hover h1 {
+    display: none;
+}
+
+.kontener2 .oki:hover h1 {
+    display: none;
+}
+ 
