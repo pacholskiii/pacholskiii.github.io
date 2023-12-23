@@ -41,112 +41,78 @@
 
        <main>
 
+    <section>
         <div class="kalkulator">
-                 <h1>Oblicz swoje zapotrzebowanie kaloryczne</h1>   
-            <div class="pola">
-                    <div class="pole-gora">
-                        <div class="pole small">
-                                <label for="plec">Płeć: </label>
-                            <select id="plec" >
-                                <option>Mężczyzna</option>
-                                <option>Kobieta</option>
-                            </select>
-                        </div>
-        
-                        <div class="pole small" >
-                            <label for="wiek">Wiek: </label>
-                            <input type="number" id="wiek" placeholder="15">
-                        </div>
-                    </div>
+            <h1>Oblicz swoje zapotrzebowanie kaloryczne</h1>   
+       <div class="pola">
+               <div class="pole-gora">
+                   <div class="pole small">
+                           <label for="plec">Płeć: </label>
+                       <select id="plec" >
+                           <option>Mężczyzna</option>
+                           <option>Kobieta</option>
+                       </select>
+                   </div>
+   
+                   <div class="pole small" >
+                       <label for="wiek">Wiek: </label>
+                       <input type="number" id="wiek" placeholder="15">
+                   </div>
+               </div>
 
-                <div class="pole-gora">
-                    <div class="pole small" >
-                        <label for="wzrost">Wzrost [cm]: </label>
-                        <input type="number" id="wzrost" placeholder="180">
-                    </div>
-                    
-                    <div class="pole small" >
-                        <label for="masa">Masa ciała [kg]: </label>
-                        <input type="number" id="masa" placeholder="90">
-                    </div>
-                </div>
+           <div class="pole-gora">
+               <div class="pole small" >
+                   <label for="wzrost">Wzrost [cm]: </label>
+                   <input type="number" id="wzrost" placeholder="180">
+               </div>
+               
+               <div class="pole small" >
+                   <label for="masa">Masa ciała [kg]: </label>
+                   <input type="number" id="masa" placeholder="90">
+               </div>
+           </div>
+
+          
+
+               <div class="srodek">
+                   <div class="pole big" >
+                       <label for="aktywnosc">Stopień aktywności fizycznej: </label>
+                       <select id="aktywnosc">
+                           <option value="1">Brak (osoba chora)</option>
+                           <option value="1.2">Mała (osoba wykonująca pracę siedzącą)</option>
+                           <option value="1.4">Umiarkowana (osoba wykonująca pracę na stojąco)</option>
+                           <option value="1.6">Duża (osoba posiadająca dużo ruchu, regularnie ćwicząca)</option>
+                           <option value="1.8">Bardzo duża (osoba wykonująca bardzo aktywny tryb życia)</option>
+                           <option value="2">Osoba zawodowo uprawiająca sport</option>
+                       </select>
+                   </div>
+
+                   <div class="pole big">
+                       <label for="cel">Wybierz swój cel:</label>
+                       <select id='cel'>
+                            <option value="1">Zredukowanie masy ciała</option>
+                            <option value="2">Utrzymwanie masy ciała</option>
+                            <option value="3">Zwiększenie masy ciała</option>
+                       </select>
+                   </div>
+               </div>
 
                
+       </div>
 
-                    <div class="srodek">
-                        <div class="pole big" >
-                            <label for="aktywnosc">Stopień aktywności fizycznej: </label>
-                            <select id="aktywnosc">
-                                <option>Brak (osoba chora)</option>
-                                <option>Mała (osoba wykonująca pracę siedzącą)</option>
-                                <option>Umiarkowana (osoba wykonująca pracę na stojąco)</option>
-                                <option>Duża (osoba posiadająca dużo ruchu, regularnie ćwicząca)</option>
-                                <option>Bardzo duża (osoba wykonująca bardzo aktywny tryb życia)</option>
-                                <option>Osoba zawodowo uprawiająca sport</option>
-                            </select>
-                        </div>
-    
-                        <div class="pole big">
-                            <label for="cel">Wybierz swój cel:</label>
-                            <select id=cel>
-                            <option>Zredukowanie masy ciała</option>
-                            <option>Utrzymwanie masy ciała</option>
-                            <option>Zwiększenie masy ciała</option>
-                            </select>
-                        </div>
-                    </div>
-
-            </div>
-
-           
-            
-
-            <div class="button"> 
-                <button id="oblicz">Oblicz</button>
-            </div>
+       <div class="button"> 
+           <button id="oblicz">Oblicz</button>
+       </div>
 
         </div>
+    </section>
 
-        <div class="wyniki">
-          <h2>Twoje zapotrzebowanie kaloryczne</h2>
-            <div class="inner-box">
-                <div class="calories">
-                    <img src="human-body.png" alt="human-body">
-                    <div>
-                        <p>Zapotrzebowanie na:</p>
-                        <strong>Utrzymanie masy ciała</strong>
-                        <span>2600 kcal</span>
-                    </div>
-                </div >
-                    <div class="values">
-                        <div>
-                            <img src="whey-protein.png" alt="">
-                            <span>Białko</span>
-                            <strong>112- 140</strong>g
-                        </div>
-                       
-                        <div>
-                            <img src="fat.png" alt="">
-                            <span>Tłuszcz</span>
-                            <strong>100 - 110</strong>g
-                        </div>
-
-                        <div>
-                            <img src="bread.png" alt="">
-                            <span>Węglowodany</span>
-                            <strong>420 - 550</strong>
-                        </div>
-
-                        
-                       
-                    </div>
-
+    <section id="wyniki-macro">
+ 
+    </section>  
 
                 
-                <div class="macro">
-                    
-
-                </div>
+                
             </div>
         </div>
 
