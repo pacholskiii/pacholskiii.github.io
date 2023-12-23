@@ -159,17 +159,6 @@ header .header p{
     margin-bottom: 32px;
     text-align: center;
 }
-.wyniki{
-    background-color: #fff;
-    width: 700px;
-    min-height: 580px;
-    position: absolute;
-    top: 870px;
-    right: 0;
-    margin-right: 100px;
-    border-radius: 12px;
-    display: none;
-}
 .pole{
     margin: 12px 0;
     font-size: 20px;
@@ -228,4 +217,67 @@ select, input{
 }
 .button:hover{
     transform: scale(110%);
+}
+.wyniki{
+    
+    background-color: #fff;
+    
+    width: 700px;
+    min-height: 580px;
+    position: absolute;
+    top: 870px;
+    right: 0;
+    margin-right: 100px;
+    border-radius: 12px;
+    padding: 20px;
+
+}
+.wyniki h2{
+    margin-bottom: 12px;;
+}
+.values{
+    padding: 35px 20px;
+}
+.values div{
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+}
+.calories img{
+    width: 100px;
+    height: 100px;
+}
+.values img{
+    width: 60px;
+    height: 60px;;
+    clear: both;
+    margin-right: 12px;;
+}
+.calories{
+    margin-top: 12px;
+    display: flex;
+}
+.calories div{
+    margin-top: 12px;
+    margin-left: 24px;
+}
+.calories p{
+    margin-bottom: 6px;;
+    font-size: 18px;
+}
+.calories strong{
+    font-size: 22px;
+    margin-right: 110px;
+}
+.calories span{
+    color: #e92323;
+    font-size: 22px;
+    font-weight: 500;
+}
+.inner-box{
+   
+    padding: 12px 24px;
+    height: 100%;
+    border-radius: 12px;
+    border: 1px solid gray;
 }

@@ -186,7 +186,7 @@ button {
     font-family: 'Kanit', sans-serif; 
 }
 button:hover {
-    background-color: rgb(153, 28, 28);
+    background-color: rgb(185, 32, 32);
     
 }
 .informacje{
@@ -254,9 +254,4 @@ b{
     background-color: rgb(185, 32, 32);
 
 }
-
-.normy-bmi-przycisk:hover {
-    background-color: rgb(153, 28, 28);
-}
-
 
