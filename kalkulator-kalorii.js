@@ -9,13 +9,13 @@ let wyniki = document.querySelector(".wyniki")
 let oblicz = document.querySelector("#oblicz");
 
 let calories;
-let protein;
-let fat;
-let carbo;
+let protein, proteinCalories;
+let fat, fatCalories;
+let carbs, carbsCalories;
 
 let ppmM;
 let ppmK;
-
+let baseCalories
 
 oblicz.addEventListener("click", () => {
    
@@ -30,9 +30,10 @@ oblicz.addEventListener("click", () => {
        
     }
     else{
-          getValues();
+          
           writeAnswers();
           calculateCalories();
+          
     }
    
 
@@ -65,12 +66,21 @@ const PPM_K = () =>{
     return ppmK;
 }
 
+function calculateMacros(weight){
+    
+    protein = Math.floor((baseCalories * 0.2) / 4);
+    fat = Math.floor((baseCalories * 0.3) / 9);
+    carbs = Math.floor((baseCalories * 0.5) / 4);
+    
+ }
+ 
+
 function calculateCalories(){
 
     let optionsPhysical = document.querySelector("#aktywnosc");
     let selectedIndex = optionsPhysical.selectedIndex + 1;
     let physicalFactor = optionsPhysical[selectedIndex - 1].value;
-    let baseCalories
+   
 
     let goalValue = document.querySelector("#cel");
     let selectedGoalIndex = goalValue.selectedIndex;
@@ -86,9 +96,7 @@ function calculateCalories(){
         baseCalories = PPM_K() * physicalFactor;
     }
 
-   
-   
-
+    calculateMacros(parseFloat(masa.value));
 
     let section = document.querySelector("#wyniki-macro");
     let results = document.createElement('div');
@@ -109,19 +117,19 @@ function calculateCalories(){
               <div>
                   <img src="whey-protein.png" alt="">
                   <span>Białko</span>
-                  <strong>112- 140</strong>g
+                  <strong>${protein}</strong>g
               </div>
              
               <div>
                   <img src="fat.png" alt="">
                   <span>Tłuszcz</span>
-                  <strong>100 - 110</strong>g
+                  <strong>${fat}</strong>g
               </div>
 
               <div>
                   <img src="bread.png" alt="">
                   <span>Węglowodany</span>
-                  <strong>420 - 550</strong>
+                  <strong>${carbs}</strong>g
               </div>
               `
             section.appendChild(results); 
@@ -129,6 +137,3 @@ function calculateCalories(){
           
 }
 
-function calculateMacros(){
-   
-}

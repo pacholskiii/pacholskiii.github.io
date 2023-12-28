@@ -219,6 +219,9 @@ button:hover {
     font-size: 22px;
     
 }
+.wyniki h2{
+    text-align: center;
+}
 .wyniki .bmi{
     font-weight: 600;
 }
