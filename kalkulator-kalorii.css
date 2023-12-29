@@ -154,6 +154,7 @@ header .header p{
     -moz-box-shadow: 9px 8px 24px -14px rgba(66, 68, 90, 1);
     box-shadow: 9px 8px 24px -14px rgba(66, 68, 90, 1);
     padding: 12px;
+    z-index: 10;
 }
 .kalkulator h1{
     margin-bottom: 32px;
@@ -218,10 +219,14 @@ select, input{
 .button:hover{
     transform: scale(110%);
 }
-.wyniki{
-    
-    background-color: #fff;
-    
+.wyniki-blank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;;
+    color: white;
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+    border: 5px dotted rgb(207, 207, 207);
     min-width: 700px;
     min-height: 580px;
     position: absolute;
@@ -230,7 +235,24 @@ select, input{
     margin-right: 100px;
     border-radius: 12px;
     padding: 20px;
-
+    user-select: none;
+    transition: all 0.1s ease-in-out;
+}
+.wyniki-blank:hover{
+    border: 5px dotted white;
+   
+}
+.wyniki{
+    background-color: #fff;
+    min-width: 700px;
+    min-height: 580px;
+    position: absolute;
+    top: 870px;
+    right: 0;
+    margin-right: 100px;
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1;
 }
 .wyniki h2{
     margin-bottom: 12px;;
@@ -289,4 +311,33 @@ select, input{
     height: 100%;
     border-radius: 12px;
     border: 1px solid gray;
+}
+
+/* Animations */
+
+@keyframes slideInLeft {
+    from{
+        transform: translate(-700px) scaleX(00%);
+    }
+    to{
+        transform: translate(0px) scaleX(100%)
+    }
+}
+.animation-wyniki{
+    animation: slideInLeft 0.2s ease-in-out 0s 1 normal both;
+}
+
+@keyframes slideInLeftWynikiBlank{
+
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(900px);
+    }
+
+}
+
+.animation-wyniki-blank{
+    animation: slideInLeftWynikiBlank 0.2s ease-in-out 0s 1 normal both;
 }

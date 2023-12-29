@@ -7,6 +7,8 @@ let cel = document.querySelector("#cel");
 
 let wyniki = document.querySelector(".wyniki")
 let oblicz = document.querySelector("#oblicz");
+let wynikiMacro = document.querySelector("#wyniki-macro");
+let wynikiBlank = document.querySelector(".wyniki-blank");
 
 let calories;
 let protein, proteinCalories;
@@ -16,6 +18,8 @@ let carbs, carbsCalories;
 let ppmM;
 let ppmK;
 let baseCalories
+
+
 
 oblicz.addEventListener("click", () => {
    
@@ -33,20 +37,13 @@ oblicz.addEventListener("click", () => {
           
           writeAnswers();
           calculateCalories();
-          
+          wynikiBlank.classList.add("animation-wyniki-blank");
+            wynikiBlank.style.display = "none";
     }
    
 
 });
 
-function getValues(){
-    let plecValue = plec.value;
-    let wiekValue = wiek.value;
-    let wzrostValue = wzrost.value;
-    let masaValue = masa.value;
-    let aktywnoscValue = aktywnosc.value;
-    let celValue = cel.value;
-}
 
 function writeAnswers(){
    if(wyniki){
@@ -100,7 +97,7 @@ function calculateCalories(){
 
     let section = document.querySelector("#wyniki-macro");
     let results = document.createElement('div');
-    results.classList.add("wyniki");
+    results.classList.add("wyniki", "animation-wyniki");
     results.innerHTML =  `
 <h2>Twoje zapotrzebowanie kaloryczne</h2>
   <div class="inner-box">
@@ -136,4 +133,6 @@ function calculateCalories(){
              
           
 }
+
+
 
