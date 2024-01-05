@@ -20,11 +20,10 @@ img{
 
 body{
     font-family: 'Poppins', sans-serif;
-   
-    /* background-color: rgba(52, 117, 187, 1);
-    background-image: linear-gradient(171deg, rgba(52, 117, 187, 1) 10%, rgba(32, 41, 95, 1) 89%); */
     background-color: rgba(226, 38, 38, 1);
     background-image: linear-gradient(181deg, rgb(173, 28, 28) 0%, rgba(29, 32, 35, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .strona{
@@ -218,7 +217,7 @@ box-shadow: 8px 14px 22px -3px rgba(208, 107, 87, 1);
     font-weight: 600;
 }
 .pasek{
-    width: 700px;
+    width: 349px;
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -229,8 +228,9 @@ box-shadow: 8px 14px 22px -3px rgba(208, 107, 87, 1);
     border-radius: 18px;
     justify-content: center;
     margin-bottom: 40px;
-    background-color: rgba(130, 16, 16, 1);
-background-image: linear-gradient(118deg, rgba(130, 16, 16, 1) 0%, rgba(144, 73, 58, 1) 100%);
+    /* background-color: rgba(130, 16, 16, 1);
+background-image: linear-gradient(118deg, rgba(130, 16, 16, 1) 0%, rgba(144, 73, 58, 1) 100%); */
+    background-color: #4E0F0F;
 }
 .pasek i{
     padding: 0 20px;

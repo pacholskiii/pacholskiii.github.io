@@ -346,20 +346,20 @@ header .header p{
 }
 
 .pasek{
-    width: 700px;
+    width: 349px;
     margin-left: auto;
     margin-right: auto;
     color: white;
     font-size: 38px;
-   
     display: flex;
     padding: 15px;
     border-radius: 18px;
     justify-content: center;
     margin-bottom: 40px;
     margin-top: 70rem;
-    background-color: rgba(130, 16, 16, 1);
-    background-image: linear-gradient(118deg, rgba(130, 16, 16, 1) 0%, rgba(144, 73, 58, 1) 100%);
+    /* background-color: rgba(130, 16, 16, 1);
+    background-image: linear-gradient(118deg, rgba(130, 16, 16, 1) 0%, rgba(144, 73, 58, 1) 100%); */
+    background-color: #4E0F0F;
 }
 .pasek i{
     padding: 0 20px;
