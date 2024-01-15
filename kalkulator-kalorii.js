@@ -102,7 +102,7 @@ function calculateCalories(){
 <h2>Twoje zapotrzebowanie kaloryczne</h2>
   <div class="inner-box">
       <div class="calories">
-          <img src="human-body.png" alt="human-body">
+          <img src="img/human-body.png" alt="human-body">
           <div>
               <p>Zapotrzebowanie na:</p>
               <strong>${goalText}</strong>
@@ -112,19 +112,19 @@ function calculateCalories(){
       </div >
           <div class="values">
               <div>
-                  <img src="whey-protein.png" alt="">
+                  <img src="img/whey-protein.png" alt="">
                   <span>Białko</span>
                   <strong>${protein}</strong>g
               </div>
              
               <div>
-                  <img src="fat.png" alt="">
+                  <img src="img/fat.png" alt="">
                   <span>Tłuszcz</span>
                   <strong>${fat}</strong>g
               </div>
 
               <div>
-                  <img src="bread.png" alt="">
+                  <img src="img/bread.png" alt="">
                   <span>Węglowodany</span>
                   <strong>${carbs}</strong>g
               </div>
