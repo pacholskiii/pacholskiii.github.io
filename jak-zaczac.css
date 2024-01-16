@@ -27,6 +27,7 @@ body{
     background-image: linear-gradient(181deg, rgb(173, 28, 28) 0%, rgba(29, 32, 35, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: white;
     /* background-color: rgba(52, 117, 187, 1);
     background-image: linear-gradient(171deg, rgba(52, 117, 187, 1) 10%, rgba(32, 41, 95, 1) 89%);
     background-repeat: no-repeat;
@@ -159,12 +160,17 @@ header{
     margin-bottom: 120px;
     cursor: pointer;
 }
+main{
+     width: 1600px;
+     margin-left: auto;
+     margin-right: auto;
+}
 #tiles{
-  
-    margin: 0 150px 150px 150px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 #tiles img{
     width: 500px;
@@ -172,7 +178,6 @@ header{
 }
 .tiles{
     height: 100%;
-  
     display: flex;
     align-items: center;
     justify-content: right;
@@ -209,13 +214,6 @@ header{
 .tile span{
 text-align: center;
 }
-
-
-
-
-
-
-
 .gradient-background {
     background: linear-gradient(300deg,#df5757,rgb(192, 66, 72),#d31616);
     background-size: 180% 180%;
@@ -233,3 +231,109 @@ text-align: center;
       background-position: 0% 50%;
     }
   }
+
+ /* ------------------Sekcja Jak zaczac */
+ .poczatki-treningu{
+    display: block;
+    min-height: 100vh;
+ }
+.poczatki-treningu .container .entry .title{
+    margin-bottom: 70px;
+    text-align: center;
+}
+.poczatki-treningu .container .entry h1{
+    font-size: 48px;
+}
+.poczatki-treningu .container .entry p{
+    font-size: 28px;
+    margin-bottom: 100px;
+}
+.list .item img{
+    width: 250px;
+    height: 250px;
+}
+
+.poczatki-treningu .container .list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.poczatki-treningu .container .list ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px 150px;
+    list-style: none;
+}
+.poczatki-treningu .container .list .item{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.poczatki-treningu .container .list .item h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.poczatki-treningu .container .list .item i{
+    margin-top: 10px;
+    font-size: 64px;
+    cursor: pointer;
+}
+.poczatki-treningu .container .list .item .modal-container{
+   
+   
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: .2s ease;
+   
+}
+.poczatki-treningu .container .list .item .modal-container.active{
+    opacity: 1;
+    visibility: visible;
+   
+}
+.poczatki-treningu .container .list .item .modal-container.active .modal{
+    transform: translate(-50%, -45%);
+}
+
+.poczatki-treningu .container .list .item .modal{
+    transition: .3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: black;
+    border-radius: 12px;
+    font-size: 28px;
+    padding: 32px 50px;
+   
+}
+
+.poczatki-treningu .container .list .item .modal h1{
+   font-size: 32px;
+   text-align: center;
+}
+.poczatki-treningu .container .list .item .modal i{
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    padding: 20px;
+    font-size: 38px;
+    
+}
+
+
+#footer{
+    width: 100%;
+    height: 500px;
+}
