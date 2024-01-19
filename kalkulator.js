@@ -32,7 +32,7 @@ oblicz.addEventListener("click", () =>{
 });
 
 normyBtn.addEventListener("click", () => {
-    normyBmi.style.visibility = "visible";
+    normyBmi.style.display = "block";
     normyBmi.classList.add("animation-normy");
     calc.classList.add("animation-calc");
 });

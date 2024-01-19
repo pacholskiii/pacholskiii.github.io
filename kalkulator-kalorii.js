@@ -33,7 +33,7 @@ oblicz.addEventListener("click", () => {
        
        
     }
-    else{
+    else if(!wyniki){
           
           writeAnswers();
           calculateCalories();
@@ -96,6 +96,7 @@ function calculateCalories(){
     calculateMacros(parseFloat(masa.value));
 
     let section = document.querySelector("#wyniki-macro");
+    section.classList.add("active");
     let results = document.createElement('div');
     results.classList.add("wyniki", "animation-wyniki");
     results.innerHTML =  `
@@ -103,11 +104,10 @@ function calculateCalories(){
   <div class="inner-box">
       <div class="calories">
           <img src="img/human-body.png" alt="human-body">
-          <div>
+          <div class="calories-info">
               <p>Zapotrzebowanie na:</p>
               <strong>${goalText}</strong>
-              <span>${baseCalories.toFixed(0)}</span>
-              <span class="added">${selectedGoalIndex == 2 ? "+ 300" : (selectedGoalIndex == 0 ? '- 300' : "")}</span>
+              <div class="demand"><span>${baseCalories.toFixed(0)}</span> <span class="added">${selectedGoalIndex == 2 ? "+ 300" : (selectedGoalIndex == 0 ? '- 300' : "")}</span></div>  
           </div>
       </div >
           <div class="values">

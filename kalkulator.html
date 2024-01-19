@@ -11,148 +11,114 @@
 
 <body>
 
+   
     <nav>
-      
+       
         <div class="nav-logo">
-            <a href="index.html">
-                <img src="img/DDDDD.png">
+            <a href="#">
+                <img src="img/logo.png">
             </a>
         </div>
 
         <ul class="nav-links">
+            <li id="index" class="link"><a href="index.html">Strona główna</a></li>
             <li id="link0" class="link"><a href="plany.html">Plany Treningowe</a></li>
             <li id="link1" class="link"><a href="jak-zaczac.html">Jak Zacząć?</a></li>
             <li id="link2" class="link"><a href="kalkulator.html">Kalkulator BMI</a></li>
-            <li id="link3" class="link"><a href="kalkulator-kalorii.html">Kalkulator Kalorii</a></li>
-        </ul>
+            <li id="link3" class="link"><a href="kalkulator-kalorii.html">Kalkulator kalorii</a></li>
 
+        </ul>
+      
     </nav>
 
     <header>
         <div class="header">
             <img src="img/Fitness_tracker-amico_1.png">
 
-        <div class="opis">
-            <h1>Kalkulator BMI</h1>
-            <p>Kalkulator BMI <b>(Body Mass Index)</b> to narzędzie obliczeniowe, które służy do oceny proporcji masy ciała do wzrostu. 
-                Kalkulator BMI korzysta z prostego wzoru matematycznego, który uwzględnia masę ciała i wzrost osoby.</p>
-        </div>
+            <div class="opis">
+                <h1>Kalkulator BMI</h1>
+                <p>Kalkulator BMI <b>(Body Mass Index)</b> to narzędzie obliczeniowe, które służy do oceny proporcji masy ciała do wzrostu. 
+                    Kalkulator BMI korzysta z prostego wzoru matematycznego, który uwzględnia masę ciała i wzrost osoby.</p>
+            </div>
         </div>
     </header>
 
 
         <main>
            
+            <article>
+                <div class="kontener-bmi">
+                    <h1>Czym jest BMI?</h1>
+                    <p>BMI czyli <span>"Body Mass Index"</span> to indeks masy ciała. Jest to wskaźnik używany do oceny, czy masa ciała osoby jest prawidłowa, 
+                        czy może występuje niedowaga, nadwaga czy otyłość. </p>
+                </div>
+            </article>
+
+                <div class="waves">
+                    <div class="upper-wave">
+                        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,100 C 206.5,83 413,66 653,66 C 893,66 1166.5,83 1440,100 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#d22d2d" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,400 L 0,233 C 272,219.5 544,206 784,206 C 1024,206 1232,219.5 1440,233 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#d22d2d" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>                    </div>
+
+                        <section id="calculator-section">
+                            <div id="calculator-container">
+                                <div class="kalkulator">
+                                    <h1>Oblicz swój wskaźnik BMI</h1>
+                                        <div class="input">
+                                            <label for="waga">Waga [kg]</label>
+                                            <input type="text" id="waga">
+                                        </div>
+                                        <div class="input">
+                                            <label for="waga">Wzrost [cm]</span></label>
+                                            <input type="text" id="wzrost">
+                                        </div>
             
-
-                <div class="box">
-                    
-                    <div class="kalkulator">
-                        <h1>Oblicz swój wskaźnik BMI</h1>
-                            
-                            <div class="input">
-                                <label for="waga">Waga [kg]</label>
-                                <input type="text" id="waga">
-                            </div>
-                            <div class="input">
-                                <label for="waga">Wzrost [cm]</span></label>
-                                <input type="text" id="wzrost">
-                            </div>
-
-                            <div class="wyniki">Twoje BMI wynosi: 
-                                <span class="bmi">00</span>
-                                
-                                <div class="normy-bmi-przycisk">
-                                   Sprawdź normy BMI
+                                        <div class="wyniki">Twoje BMI wynosi: 
+                                            <span class="bmi">00</span>
+                                            
+                                            <div class="normy-bmi-przycisk">
+                                            Sprawdź normy BMI
+                                            </div>   
+                                        </div>
+                                        <button class="oblicz">OBLICZ</button>
                                 </div>
-                                   
+
+                                <div class="normy-bmi ">
+                                    <h1>Normy BMI</h1>
+                                    <p> poniżej <b>16</b></span> - wygłodzenie</p>
+                                    <p> <b>16</b> - <b>16.99</b> - wychudzenie</p>
+                                    <p> <b>17</b> - <b>18.49</b> - niedowagę</p>
+                                    <p> <b>18.5</b> - <b>24.99</b> - wagę prawidłową </p>
+                                    <p> <b>25.0</b> - <b>29.9</b> - nadwagę</p>
+                                    <p> <b>30.0</b> - <b>34.99</b> - <b>I</b> stopień otyłości</p>
+                                    <p> <b>35.0</b> - <b>39.99</b> - <b>II</b> stopień otyłości</p>
+                                    <p>powyżej <b>40.0</b> - otyłość skrajną</p>
+                                </div>
                             </div>
 
-                            <button class="oblicz">OBLICZ</button>
-                    </div>
-         
+                        </section>
 
-                </div>
-
-                 <div class="kontener-bmi">
-                        <h1>Czym jest BMI?</h1>
-                        <p>BMI czyli <span>"Body Mass Index"</span> to indeks masy ciała. Jest to wskaźnik używany do oceny, czy masa ciała osoby jest prawidłowa, 
-                            czy może występuje niedowaga, nadwaga czy otyłość. </p>
+                       <div class="lower-wave">
+                        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 186.5,168 373,186 613,186 C 853,186 1146.5,168 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#d22d2d" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>                       </div>
+                   
                 </div>
                 
-             
-               
-
-                <div class="normy-bmi ">
-                 
-                        <h1>Normy BMI</h1>
-                        <p> poniżej <b>16</b></span> - wygłodzenie</p>
-                        <p> <b>16</b> - <b>16.99</b> - wychudzenie</p>
-                        <p> <b>17</b> - <b>18.49</b> - niedowagę</p>
-                        <p> <b>18.5</b> - <b>24.99</b> - wagę prawidłową </p>
-                        <p> <b>25.0</b> - <b>29.9</b> - nadwagę</p>
-                        <p> <b>30.0</b> - <b>34.99</b> - <b>I</b> stopień otyłości</p>
-                        <p> <b>35.0</b> - <b>39.99</b> - <b>II</b> stopień otyłości</p>
-                        <p>powyżej <b>40.0</b> - otyłość skrajną</p>
-                  
-                </div>
-
-
-        </main>   
-       
-      
-           <div class="fale">
-                <div class="fala">
-                
-                    <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
-                        <defs>
-                        <path id="wavepath" d="M 0 2000 0 500 Q 150 483 300 500 t 300 0 300 0 300 0 300 0 300 0  v1000 z" />
-                        <path id="motionpath" d="M -600 0 0 0" /> 
-                        </defs>
-                        <g >
-                        <use xlink:href="#wavepath" y="-370" fill="#d22d2d">
-                        <animateMotion
-                        dur="5s"
-                        repeatCount="indefinite">
-                        <mpath xlink:href="#motionpath" />
-                        </animateMotion>
-                        </use>
-                        </g>
-                    </svg>
-
-            </div>
-
             
-       
-
-            <div class="fala2">
-              
-                <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
-                    <defs>
-                     <path id="wavepath" d="M 0 2000 0 500 Q 150 483 300 500 t 300 0 300 0 300 0 300 0 300 0  v1000 z" />
-                     <path id="motionpath" d="M -600 0 0 0" /> 
-                    </defs>
-                    <g >
-                     <use xlink:href="#wavepath" y="-40" fill="#d22d2d">
-                     <animateMotion
-                      dur="5s"
-                      repeatCount="indefinite">
-                      <mpath xlink:href="#motionpath" />
-                     </animateMotion>
-                     </use>
-                    </g>
-                  </svg>
-
-            </div>
-           </div>
-
+        </main>   
 
            <footer>
-            <div class="pasek">
-                <a href="https://www.instagram.com/pr1m4lift/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@prim4l1ift" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-        </footer>
+                <div class="footer">
+                    <ul class="nav-footer">
+                        <li class="item"><a href="index.html">Strona główna</a></li>
+                        <li class="item"><a href="#">Plany Treningowe</a></li>
+                        <li class="item"><a href="#">Jak zacząć?</a></li>
+                        <li class="item"><a href="kalkulator.html">Kalkulator BMI</a></li>
+                        <li class="item"><a href="kalkulator-kalorii.html">Kalkulator kalorii</a></li>
+                    </ul>
+                    <div class="media">
+                        <a href="https://www.instagram.com/pr1m4lift/" target="_blank"><i class="ri-instagram-line"></i></a>
+                        <a href="https://www.tiktok.com/@prim4l1ift" target="_blank"><i class="ri-tiktok-fill"></i></a>
+                    </div>
+                </div>
+            </footer>
 
 
         <script src="https://kit.fontawesome.com/76a8b6d50a.js" crossorigin="anonymous"></script>
