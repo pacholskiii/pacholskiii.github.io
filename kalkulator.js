@@ -6,6 +6,7 @@ let bmiSpan = document.querySelector(".bmi");
 let normyBmi = document.querySelector(".normy-bmi");
 let normyBtn = document.querySelector(".normy-bmi-przycisk");
 let calc = document.querySelector(".kalkulator");
+let bmiContainer = document.querySelector(".kontener-bmi");
 
 let weightValue;
 let heightValue;
@@ -35,9 +36,15 @@ normyBtn.addEventListener("click", () => {
     normyBmi.style.display = "block";
     normyBmi.classList.add("animation-normy");
     calc.classList.add("animation-calc");
+    let normsContainer = document.getElementById("norms");
+    if(normsContainer){
+        normsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest'});
+      
+    }
+    
 });
 
-let bmiContainer = document.querySelector(".kontener-bmi");
+
 
 
 // Animations
@@ -47,6 +54,8 @@ let bmiInfoInerval = setInterval(function(){
         bmiContainer.style.visibility = "visible";
         bmiContainer.classList.add("animation-bmi");
         clearInterval(bmiInfoInerval);
+
+        
     }
    
 }, 1000/60)

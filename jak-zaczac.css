@@ -230,7 +230,7 @@ text-align: center;
     100% {
       background-position: 0% 50%;
     }
-  }
+}
 
  /* ------------------Sekcja Jak zaczac */
  .poczatki-treningu{
@@ -282,8 +282,7 @@ text-align: center;
     cursor: pointer;
 }
 .poczatki-treningu .container .list .item .modal-container{
-   
-   
+    z-index: 999;
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -331,9 +330,145 @@ text-align: center;
     font-size: 38px;
     
 }
-
+.btn-arrow{
+    animation: arrowDownAnimation 4s ease infinite;
+}
 
 #footer{
     width: 100%;
     height: 500px;
+}
+
+@keyframes arrowDownAnimation{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------ZDROWY STYL ŻYCIA-------------------------- */
+
+.styl-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    line-height: 50px;
+}
+.styl-home h1{
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+    
+}
+.styl-home h2{
+    font-size: 32px;
+    margin-bottom: 35px;
+    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+}
+.styl-home p{
+    font-size: 28px;
+   
+}
+.styl-home .styl-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+.styl-home .styl-description .styl-scroll-btn{
+    text-align: center;
+    font-size: 26px;
+    background-color: white;
+    color: black;
+    width: 30%;
+    border-radius: 12px;
+    padding: 20px 0px;
+    margin: 50px 0px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.styl-home .styl-description .styl-scroll-btn:hover{
+   transform: scale(105%);
+}
+.styl-home .styl-description .styl-scroll-btn a{
+    color: black;
+}
+.swipers{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.swiper-container h1{
+   text-align: center;
+   margin-bottom: 15px;
+}
+.swiper {
+    width: 240px;
+    height: 320px;
+}
+.swiper-slide{
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    background-color: #fff;
+    border: 4px solid black;
+    text-align: center;
+  }
+  .swiper-slide img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    transform: translateY(25%);
+  }
+  .swiper-slide span{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+  }
+
+.points{ 
+    min-height: 100vh;
+    max-width: 1600px;
+    margin: 200px auto;
+}
+.point{
+    display: flex;
+    padding: 0 70px;
+}
+.point img{
+    width: 300px;
+    height: 300px;
+    margin: 0 100px 0 0;   
+}
+
+.point h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.point p{
+    font-size: 24px;
+}
+.point span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
 }

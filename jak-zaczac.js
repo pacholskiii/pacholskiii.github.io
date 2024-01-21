@@ -4,10 +4,6 @@ let items = document.querySelectorAll(".item");
 let value;
 let btnClose = document.querySelectorAll(".btn-close");
 
-
-
-
-
 console.log();
 
 btnArrow.forEach((btn, index) => {
@@ -26,3 +22,10 @@ btnClose.forEach(btn => {
     })
     
 });
+
+// swiper
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+  });
