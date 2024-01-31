@@ -23,7 +23,9 @@ let baseCalories
 
 oblicz.addEventListener("click", () => {
    
+    
     if(isNaN(parseFloat(wiek.value)) || isNaN(parseFloat(wzrost.value)) || isNaN(parseFloat(masa.value))){
+       
         oblicz.innerHTML = "Podaj poprawne wartości!";
         oblicz.style.fontSize = "18px";
         
@@ -74,17 +76,31 @@ function calculateMacros(weight){
 
 function calculateCalories(){
 
+   
+    calculateMacros(parseFloat(masa.value));
+
+
+    let section = document.querySelector("#wyniki-macro");
+    section.classList.add("active");
+    let results = document.createElement('div');
+
+    if (section.querySelector('.wyniki')) {
+        section.removeChild(section.querySelector('.wyniki'));
+        writeHTML(results, section);
+    }
+    else{
+        writeHTML(results, section);
+    }
+
+   
+}
+
+function writeHTML(results, section){
+
+    
     let optionsPhysical = document.querySelector("#aktywnosc");
     let selectedIndex = optionsPhysical.selectedIndex + 1;
     let physicalFactor = optionsPhysical[selectedIndex - 1].value;
-   
-
-    let goalValue = document.querySelector("#cel");
-    let selectedGoalIndex = goalValue.selectedIndex;
-    console.log(selectedGoalIndex);
-   
-    let goalText = goalValue[selectedGoalIndex].text;
-    console.log(goalText);
 
     if(plec.value == "Mężczyzna"){
         baseCalories = PPM_M() * physicalFactor;
@@ -93,11 +109,13 @@ function calculateCalories(){
         baseCalories = PPM_K() * physicalFactor;
     }
 
-    calculateMacros(parseFloat(masa.value));
+    let goalValue = document.querySelector("#cel");
+    let selectedGoalIndex = goalValue.selectedIndex;
+    console.log(selectedGoalIndex);
+   
+    let goalText = goalValue[selectedGoalIndex].text;
+    console.log(goalText);
 
-    let section = document.querySelector("#wyniki-macro");
-    section.classList.add("active");
-    let results = document.createElement('div');
     results.classList.add("wyniki", "animation-wyniki");
     results.innerHTML =  `
 <h2>Twoje zapotrzebowanie kaloryczne</h2>
@@ -129,9 +147,8 @@ function calculateCalories(){
                   <strong>${carbs}</strong>g
               </div>
               `
-            section.appendChild(results); 
              
-          
+                section.appendChild(results);  
 }
 
 
