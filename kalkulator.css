@@ -132,7 +132,6 @@ header .header p{
     width: 100%;
     margin-top: 70px;;
     letter-spacing: 4px;
-    
     color: white;
     text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
     margin-bottom: 40px;
@@ -282,14 +281,17 @@ b{
 }
 article{
     max-width: 1700px;
+   
     margin-left: auto;
     margin-right: auto;  
     padding: 50px;
+    margin-top: -258px;
 }
 .kontener-bmi{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
     width: 100%;
     background-color: white;
     padding: 28px;
@@ -314,7 +316,6 @@ article{
 .footer{
     display: flex;
     flex-direction: column;
-    
     margin-top: 150px;
     width: 100%;
     align-items: center;
@@ -510,6 +511,7 @@ article{
     article{
         width: 100%;
         padding: 20px;
+       
     }
     .normy-bmi p{
         font-size: 20px;

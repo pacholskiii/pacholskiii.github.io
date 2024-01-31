@@ -11,17 +11,17 @@
 }
 a{
     color: white;
+    text-decoration: none;
 }
 img{
     width: 100%;
     display: flex;
 }
-
-a{
-    text-decoration: none;
+html{
+    scroll-behavior: smooth;
 }
-
 body{
+    
     font-family: 'Poppins', sans-serif;
     background-color: rgba(226, 38, 38, 1);
     background-image: linear-gradient(181deg, rgb(173, 28, 28) 0%, rgba(29, 32, 35, 1) 100%);
@@ -36,51 +36,46 @@ body{
 
 
 nav{
-   
     max-width: 1600px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+   
     align-items: center;
-    justify-content: center;
     gap: 2rem;
     font-family: 'Kanit', sans-serif;
-
+    padding: 0 70px;
 }
 
 .nav-logo{
-    
+    margin-top: 20px;
     max-width: 150px;
     max-height: 150px;
     margin-right: auto;;
+    
 }
-
 .nav-links{
-   
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    font-size: 25px;
-    justify-items: center;
-    width: 400px;
-    margin-right: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
     width: 100%;
-    height: 70px;
+    justify-content: space-between;
     align-items: center;
+    margin-right: 0;
     border-radius: 150px 40px 150px 40px;
-    /* background-color: rgba(31, 89, 158, 1);
-    background-image: linear-gradient(90deg, rgba(31, 89, 158, 1) 0%, rgba(35, 106, 181, 1) 100%); */
     background-color: #4E0F0F;
-
-        
+    padding: 20px;
 }
+
+
 
 .link a{
-   
-   
+    font-size: 24px;;
     position: relative;
-    padding-bottom: 0.75rem;
+    padding: 0 30px;
     color: #fff;
     transition: all 0.3s ease-in-out;
 }
@@ -102,86 +97,73 @@ nav{
     width: 70%;
 }
 
-.pasek{
-    width: 349px;
+
+header .header{
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    color: white;
-    font-size: 38px;
-    cursor: pointer;
     display: flex;
-    padding: 15px;
-    border-radius: 18px;
+    height: 70vh;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+.header .opis{
+    margin-left: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+}
+.header img{
+    min-width: 300px;
+    min-height: 300px;
+
+   max-width: 600px;
+   max-height: 600px;
+ 
+}
+.header h1{
+    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
     margin-bottom: 40px;
-    /* background-color: rgba(130, 16, 16, 1);
-    background-image: linear-gradient(118deg, rgba(130, 16, 16, 1) 0%, rgba(144, 73, 58, 1) 100%); */
-    background-color: #4E0F0F;
-    margin-top: 40rem;
-}
-.pasek i{
-    padding: 0 20px;
-}
-header{
-    margin: 0 150px 0 150px;
-}
-.home{
-    display: flex;
-    justify-content: center;
-}
-.home img{
-    width: 500px;;
-    height: 500px;
-}
-.home .start-info{
-    margin-top: 120px;
-    line-height: 40px;
-    margin-left: 50px;
-}
-.home h1{
-    font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 20px;
     letter-spacing: 3px;
-    color: white;
-    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+    font-size: 64px;
 }
-.home p{
-   
+.header p{
     font-size: 24px;
-    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
-    color: white;
 }
 .arrow-down{
     display: flex;
+    align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 102px;
-    margin-bottom: 120px;
-    cursor: pointer;
+    font-size: 72px;;
 }
 main{
-     width: 1600px;
+     max-width: 1600px;
      margin-left: auto;
      margin-right: auto;
 }
 #tiles{
+    min-height: 70vh;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    display: none;
+    
 }
 #tiles img{
-    width: 500px;
-    height: 500px;;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 600px;
+    max-height: 600px;;
 }
 .tiles{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-  
+    
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .tile{
     color: #fff;
@@ -193,7 +175,7 @@ main{
     justify-content: center;
     align-items: center;
     padding: 18px;
-    margin: 0 20px;
+    margin: 15px;
     width: 300px;
     height: 350px;
     border-radius: 12px;;
@@ -233,55 +215,61 @@ text-align: center;
 }
 
  /* ------------------Sekcja Jak zaczac */
- .poczatki-treningu{
-    display: block;
+ #poczatki-treningu{
+    margin: 200px 0 300px 0;
     min-height: 100vh;
+    padding: 30px;
  }
-.poczatki-treningu .container .entry .title{
+#poczatki-treningu .container .entry .title{
     margin-bottom: 70px;
     text-align: center;
 }
-.poczatki-treningu .container .entry h1{
-    font-size: 48px;
+#poczatki-treningu .container .entry h1{
+    font-size: 64px;
+    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
 }
-.poczatki-treningu .container .entry p{
+#poczatki-treningu .container .entry p{
     font-size: 28px;
     margin-bottom: 100px;
 }
+
 .list .item img{
     width: 250px;
     height: 250px;
 }
 
-.poczatki-treningu .container .list{
+#poczatki-treningu .container .list{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
-.poczatki-treningu .container .list ul{
+#poczatki-treningu .container .list ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 100px 150px;
+    width: 100%;
     list-style: none;
 }
-.poczatki-treningu .container .list .item{
+#poczatki-treningu .container .list .item{
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 75px 100px;
 }
-.poczatki-treningu .container .list .item h1{
+#poczatki-treningu .container .list .item h1{
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
 }
-.poczatki-treningu .container .list .item i{
+#poczatki-treningu .container .list .item i{
     margin-top: 10px;
     font-size: 64px;
     cursor: pointer;
 }
-.poczatki-treningu .container .list .item .modal-container{
+#poczatki-treningu .container .list .item .modal-container{
     z-index: 999;
     opacity: 0;
     visibility: hidden;
@@ -295,16 +283,16 @@ text-align: center;
     transition: .2s ease;
    
 }
-.poczatki-treningu .container .list .item .modal-container.active{
+#poczatki-treningu .container .list .item .modal-container.active{
     opacity: 1;
     visibility: visible;
    
 }
-.poczatki-treningu .container .list .item .modal-container.active .modal{
+#poczatki-treningu .container .list .item .modal-container.active .modal{
     transform: translate(-50%, -45%);
 }
 
-.poczatki-treningu .container .list .item .modal{
+#poczatki-treningu .container .list .item .modal{
     transition: .3s ease;
     position: absolute;
     top: 50%;
@@ -318,11 +306,11 @@ text-align: center;
    
 }
 
-.poczatki-treningu .container .list .item .modal h1{
+#poczatki-treningu .container .list .item .modal h1{
    font-size: 32px;
    text-align: center;
 }
-.poczatki-treningu .container .list .item .modal i{
+#poczatki-treningu .container .list .item .modal i{
     position: absolute;
     right: -10px;
     top: -20px;
@@ -334,10 +322,6 @@ text-align: center;
     animation: arrowDownAnimation 4s ease infinite;
 }
 
-#footer{
-    width: 100%;
-    height: 500px;
-}
 
 @keyframes arrowDownAnimation{
     0%{
@@ -352,38 +336,41 @@ text-align: center;
 }
 
 /* --------------------------ZDROWY STYL ŻYCIA-------------------------- */
-
-.styl-home{
+#zdrowy-styl-zycia{
+    padding-top: 50px;
+}
+.home{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
-    line-height: 50px;
+    text-align: center;
+   
 }
-.styl-home h1{
+.home h1{
     font-size: 48px;
     margin-bottom: 30px;
     text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
     
 }
-.styl-home h2{
+.home h2{
     font-size: 32px;
     margin-bottom: 35px;
     text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
 }
-.styl-home p{
+.home p{
     font-size: 28px;
-   
+    text-align: center;
 }
-.styl-home .styl-description{
+.home .description{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px 30px;
 }
-.styl-home .styl-description .styl-scroll-btn{
+.home .description .styl-scroll-btn{
     text-align: center;
     font-size: 26px;
     background-color: white;
@@ -395,18 +382,21 @@ text-align: center;
     cursor: pointer;
     transition: .3s ease;
 }
-.styl-home .styl-description .styl-scroll-btn:hover{
+.home .description .styl-scroll-btn:hover{
    transform: scale(105%);
 }
-.styl-home .styl-description .styl-scroll-btn a{
+.home .description .styl-scroll-btn a{
     color: black;
 }
 .swipers{
     width: 80%;
-    height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+   align-items: center;
+    overflow: hidden;
+    padding: 75px 0;
+    
 }
 .swiper-container h1{
    text-align: center;
@@ -415,8 +405,11 @@ text-align: center;
 .swiper {
     width: 240px;
     height: 320px;
+  
 }
 .swiper-slide{
+    width: 80%;
+    max-width: 240px;
     border-radius: 18px;
     font-size: 22px;
     font-weight: bold;
@@ -424,6 +417,7 @@ text-align: center;
     background-color: #fff;
     border: 4px solid black;
     text-align: center;
+    margin: 0 auto;
   }
   .swiper-slide img{
     display: block;
@@ -443,15 +437,32 @@ text-align: center;
     min-height: 100vh;
     max-width: 1600px;
     margin: 200px auto;
+    padding: 30px;
 }
 .point{
+    display: flex;  
+    margin: 30px 0;
+}
+.point .image-container{
     display: flex;
-    padding: 0 70px;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    min-height: 320px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 30px;
+    margin-right: 80px;
 }
 .point img{
-    width: 300px;
-    height: 300px;
-    margin: 0 100px 0 0;   
+    width: 200px;
+    height: 200px;
+  
+}
+.point .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .point h1{
@@ -471,4 +482,455 @@ text-align: center;
     width: 60px;
     height: 60px;
     margin-right: 20px;
+}
+.point:nth-child(10) .description span{
+    font-size: 36px;
+}
+
+/* ----------------------Sekcja silownia dla kazdego---------------------- */
+#silownia-dla-kazdego{
+    padding-top: 50px;
+    margin: 300px 0 400px 0;
+    padding: 30px;
+}
+.home-silownia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  
+}
+.home-silownia h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.home-silownia h2{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.home-silownia p{
+    text-align: center;
+    font-size: 22px;
+}
+.cards-container{
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-shadow: 8px 8px 24px 7px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 8px 8px 24px 7px rgba(0, 0, 0, 1);
+    box-shadow: 8px 8px 24px 7px rgba(0, 0, 0, 1);
+}
+.card{
+   
+    width: 100%;
+    display: inline-flex;
+}
+.cards-container .card-img{
+    flex:  0 0 50%;
+    padding: 20px;
+}
+.cards-container .card-img img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   padding: 30px;
+}
+
+.card .card-description{
+    padding: 30px;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+.card .card-description h1{
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.card .card-description p{
+    font-size: 20px;
+    text-shadow: 4px 4px 6px rgb(131, 131, 150);
+    
+}
+
+.card:nth-child(1) .card-description{
+    background-color: #EDD154;
+}
+.card:nth-child(1) .card-description h1{
+    text-shadow: 4px 4px 6px #8b7e42;
+}   
+.card:nth-child(2) .card-description{
+    background-color: #F6851F;
+}
+.card:nth-child(2) .card-description h1{
+    text-shadow: 4px 4px 6px #a06b3d;
+}
+.card:nth-child(3) .card-description{
+    background-color: #CBE558;
+}
+.card:nth-child(3) .card-description h1{
+    text-shadow: 4px 4px 6px #83972b;
+}
+.card:nth-child(4) .card-description{
+    background-color: #83D9FF;
+}
+.card:nth-child(4) .card-description h1{
+    text-shadow: 4px 4px 6px #4d849c;
+}
+.card:nth-child(5) .card-description{
+    background-color: #2FDF84;
+}
+.card:nth-child(5) .card-description h1{
+    text-shadow: 4px 4px 6px #378b60;
+}
+.card:nth-child(6) .card-description{
+    background-color: #F0C020;
+}
+.card:nth-child(6) .card-description h1{
+    text-shadow: 4px 4px 6px #97823d;
+}
+.card:nth-child(7) .card-description{
+    background-color: #FC3E81;
+}
+.card:nth-child(7) .card-description h1{
+    text-shadow: 4px 4px 6px #964662;
+}
+.card:nth-child(8) .card-description{
+    background-color: #FFD54F;
+}
+.card:nth-child(8) .card-description h1{
+    text-shadow: 4px 4px 6px #8a7328;
+}
+.card:nth-child(9) .card-description{
+    background-color: #FFD0C7;
+}
+.card:nth-child(9) .card-description h1{
+    text-shadow: 4px 4px 6px #b99c94;
+}
+.card:nth-child(10) .card-description{
+    background-color: #FF6F95;
+}
+.card:nth-child(10) .card-description h1{
+    text-shadow: 4px 4px 6px #f7a1b8;
+}
+.card .card-description:hover{
+    user-select: none;
+    transform: scale(105%);
+    -webkit-box-shadow: 5px 8px 26px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 8px 26px 0px rgba(0, 0, 0, 1);
+    box-shadow: 5px 8px 26px 0px rgba(0, 0, 0, 1);
+}
+
+/* -------------footer------------- */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 175px;
+    min-height: 200px;
+    color: white;
+    font-size: 38px;
+    padding: 15px;
+    justify-content: center;
+    background-color: rgba(130, 16, 16, 1);
+    background-image: linear-gradient(118deg, rgba(130, 16, 16, 1) 0%, rgba(144, 73, 58, 1) 100%);
+}
+
+.footer .nav-footer{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.footer .nav-footer .item{
+    padding: 20px;
+    transition: all .3s ease;
+}
+.footer .nav-footer .item a{
+    font-size: 32px;
+    color: #fff;
+    transition: .3s ease;
+}
+.footer .nav-footer .item a:hover{
+    color: rgba(255, 255, 255, 0.685);
+   
+}
+.footer .media{
+    display: flex;
+     
+}
+.footer i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    background-color: #fff;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+   
+}
+.footer i:hover{
+    
+   transform: scale(90%);
+}
+@media screen and (max-width: 1593px) {
+    .cards-container{
+     
+        grid-template-columns: 1fr;
+    }
+    .cards-container .card-img{
+        flex: 0 0 50%;
+    }
+    .card .card-description{
+        flex: 0 0 50%;
+    }
+    .card .card-description h1{
+        font-size: 42px;
+    }
+    .card .card-description p{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 1460px){
+    
+    .header h1{
+        font-size: 48px;
+    }
+    .header p{
+        font-size: 20px;
+    }
+    #tiles img{
+        display: none;
+    }
+    #poczatki-treningu .container .entry h1{
+        font-size: 48px;
+    }
+    #poczatki-treningu .container .entry p{
+        font-size: 22px;;
+    }
+    #poczatki-treningu .container .list .item{
+        margin: auto;
+        
+    }
+
+    #zdrowy-styl-zycia .home h1{
+        font-size: 42px;
+    }
+    #zdrowy-styl-zycia .home h2{
+        font-size: 28px;
+    }
+    #zdrowy-styl-zycia .home p{
+        font-size: 24px;
+    }
+    #zdrowy-styl-zycia .home .description .styl-scroll-btn a{
+        font-size: 22px;
+        padding: 25px 0px;
+    }
+    #zdrowy-styl-zycia .description h1{
+        font-size: 32px;
+    }
+    #zdrowy-styl-zycia .description p{
+        font-size: 18px;
+    }
+    #zdrowy-styl-zycia .home p{
+        font-size: 24px;
+    }
+
+
+    #silownia-dla-kazdego .home-silownia h1{
+        font-size: 32px;
+    }
+    #silownia-dla-kazdego .home-silownia h2{
+        font-size: 26px;
+    }
+    #silownia-dla-kazdego .home-silownia p{
+        font-size: 20px;
+    }
+    .card .card-description h1{
+        font-size: 36px;
+    }
+    .card .card-description p{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1240px){
+    nav{
+        padding-top: 30px;   
+       
+    }
+    .nav-logo{
+        display: none;
+    }
+    .nav-links{
+        padding: 30px;
+        
+    }
+    .header img{
+        display: none;
+    }
+    #index{
+        display: block;
+    }
+    #poczatki-treningu .container .entry h1{
+        font-size: 42px;
+    }
+    #poczatki-treningu .container .entry p{
+        font-size: 28px;;
+    }
+    .home .description .styl-scroll-btn {
+        width: 60%;
+        padding: 15px 0;
+        margin: 30px 0;
+    }
+
+    .swipers {
+        width: 90%;
+        padding: 50px 0;
+    }
+
+    .swiper {
+        width: 180px;
+        height: 240px;
+    }
+    .point{
+        /* margin: 50px 0; */
+    }
+    .point .image-container{
+        min-width: 250px;
+        min-height: 250px;
+    }
+    .point img{
+        width: 150px;
+        height: 150px;
+    }
+    #zdrowy-styl-zycia .description h1{
+        font-size: 38px;
+    }
+    #zdrowy-styl-zycia .description p{
+        font-size: 20px;
+    } 
+    #zdrowy-styl-zycia .home p{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1020px){
+    .list .item img{
+        width: 150px;
+        height: 150px;
+    }
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .cards-container .card-img,
+    .card .card-description {
+        flex: 1 1 50%;
+    }
+
+    .cards-container .card-img{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       padding: 0;
+      
+    }
+    .cards-container .card-img img{
+       padding: 15px;
+        width: 50%;
+    }
+
+    .swiper-slide img{
+        width: 120px;
+        height: 120px;
+      }
+    .point .image-container{
+        min-width: 200px;
+        min-height: 200px;
+        margin: 0 25px;
+        padding: 0;
+    }
+    .point img{
+        width: 100px;
+        height: 100px;
+    }
+    .point span{
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    #zdrowy-styl-zycia .description h1{
+        font-size: 34px;
+    }
+    #zdrowy-styl-zycia .description p{
+        font-size: 16px;
+    } 
+    #zdrowy-styl-zycia .home p{
+        font-size: 24px;
+    }
+   
+}
+@media screen and (max-width: 805px){
+
+    #poczatki-treningu .container .list{
+       
+    }
+    #poczatki-treningu .container .list ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .point .image-container{ 
+        width: 150px;
+        height: 150px;
+    }
+    #zdrowy-styl-zycia .description h1{
+        font-size: 28px;
+    }
+    #zdrowy-styl-zycia .description p{
+        font-size: 18px;
+    } 
+    #zdrowy-styl-zycia .home{
+        padding: 0 20px;
+    }
+    #zdrowy-styl-zycia .home p{
+        font-size: 24px;
+    }
+    .swipers{
+       
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .swiper{
+      
+    }
+}
+@media screen and (max-width: 530px){
+    .point .image-container{
+        display: none;
+    }
+    #poczatki-treningu .container .list ul{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 }

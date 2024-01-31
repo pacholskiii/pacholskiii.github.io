@@ -22,6 +22,7 @@ a{
 }
 
 body{
+    position: relative;
     font-family: 'Poppins', sans-serif;
     background-color: rgba(226, 38, 38, 1);
     background-image: linear-gradient(181deg, rgb(173, 28, 28) 0%, rgba(29, 32, 35, 1) 100%);
@@ -45,6 +46,9 @@ nav{
     padding: 0 50px;
 }
 
+#index{
+    display: none;
+}
 .nav-logo{
     margin-top: 20px;
     max-width: 150px;
@@ -328,7 +332,6 @@ select, input{
 .footer{
     display: flex;
     flex-direction: column;
-    
     margin-top: 150px;
     width: 100%;
     align-items: center;
