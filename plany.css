@@ -216,7 +216,9 @@ nav{
     height: 100%;
  
 }
-
+.swiper-container a{
+    color: black;
+}
 .swiper {
     width: 100%;
     height: 100%;
@@ -331,9 +333,10 @@ nav{
 }
 
 .plans-dropdown-section .accordion-table-container{
-    max-height: 1000px;
+    max-height: 2000px;
     transition: all 1s ease;
     overflow: hidden;
+    
 }
 .accordion-table-container.collapsed{
     max-height: 0;
@@ -373,22 +376,23 @@ nav{
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
     box-shadow: 8px 8px 24px -11px rgba(66, 68, 90, 1);
-    border-collapse: collapse;  
-   
+    padding: 0 50px;
+    border-spacing: 0;
 }
 .plans-dropdown-section .accordion-header .ch-d{
     transition: all 0.7s ease;
 }
-
 .plans-dropdown-section .accordion  table th{
     font-size: 36px;
-    text-align: center;
-   
+    text-align: center;  
 }
+
 .plans-dropdown-section .accordion  table tr td{
     font-size: 18px;
     text-align: center;
-    
+    border-bottom: 1px solid rgba(128, 128, 128, 0.496);
+    padding: 30px 0px;
+   
 }
 
 .plans-dropdown-section .accordion , th, td{
