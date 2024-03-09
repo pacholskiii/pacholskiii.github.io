@@ -11,28 +11,34 @@
 
 <body>
    
-        <nav>
+    <nav>
        
-            <div class="nav-logo">
-                <a href="#">
-                    <img src="img/logo.png">
-                </a>
-            </div>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="img/logo.png">
+            </a>
+        </div>
 
-            <ul class="nav-links">
-                <li id="index" class="link"><a href="index.html">Strona główna</a></li>
-                <li id="link0" class="link"><a href="plany.html">Plany Treningowe</a></li>
-                <li id="link1" class="link"><a href="jak-zaczac.html">Jak Zacząć?</a></li>
-                <li id="link2" class="link"><a href="kalkulator.html">Kalkulator BMI</a></li>
-                <li id="link3" class="link"><a href="kalkulator-kalorii.html">Kalkulator kalorii</a></li>
-
-            </ul>
+        <ul class="nav-links ">
           
-        </nav>
+            <li id="link0" class="link"><a href="plany.html">Plany Treningowe</a></li>
+            <li id="link1" class="link"><a href="jak-zaczac.html">Jak Zacząć?</a></li>
+            <li id="link2" class="link"><a href="kalkulator.html">Kalkulator BMI</a></li>
+            <li id="link3" class="link"><a href="kalkulator-kalorii.html">Kalkulator kalorii</a></li>
+
+        </ul>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+    </nav>
     
     
 
-       <section class="home-section">
+       <header class="home-section">
           <div class="home-container">
             <div class="info">
                 <h1>PrimaLift</h1>
@@ -54,14 +60,15 @@
            
 
           </div>
-       </section>
+        </header>
     
       
     
        <main>
             <section class="information">
                 <div class="info-section">
-                    <img src="img/About_us_page-rafiki_1.png" alt="about-us">
+                    <img src="img/About_us_page-rafiki_1.png" alt="about-us" class="order">
+
                     <div id="o-nas">
                         <h1>O NAS</h1>
                         <p>Jesteśmy uczniami klasy 2 informatycznej, gdzie tworzymy stronę internetową mającą na celu pomóc osobą w potrzebie rozwinąć się. Wszyscy jesteśmy pełni zaangażowania i energii w tym co robimy. 
@@ -82,7 +89,7 @@
                 </div>
                 <div class="info-section">
                    
-                    <img src="img/Contact_us-bro_2.png" alt="contact-us">
+                    <img src="img/Contact_us-bro_2.png" alt="contact-us" class="order">
                     <div id="kontakt">
                         <h1>KONTAKT</h1>
                         <p>Jeżeli potrzebujesz pomocy, zawsze możesz skontaktować się z nami poprzez nasze Social Media oraz naszego E-maila <a href="mailto:pr1m4lift@gmail.com">pr1m4lift@gmail.com</a>  Social Media podane niżej.</p>
@@ -91,13 +98,12 @@
             </section>
        </main>
 
-      
-    <footer>
+       <footer>
         <div class="footer">
             <ul class="nav-footer">
                 <li class="item"><a href="index.html">Strona główna</a></li>
-                <li class="item"><a href="plany.html">Plany Treningowe</a></li>
-                <li class="item"><a href="jak-zaczac.html">Jak zacząć?</a></li>
+                <li class="item"><a href="#">Plany Treningowe</a></li>
+                <li class="item"><a href="#">Jak zacząć?</a></li>
                 <li class="item"><a href="kalkulator.html">Kalkulator BMI</a></li>
                 <li class="item"><a href="kalkulator-kalorii.html">Kalkulator kalorii</a></li>
             </ul>
@@ -105,14 +111,13 @@
                 <a href="https://www.instagram.com/pr1m4lift/" target="_blank"><i class="ri-instagram-line"></i></a>
                 <a href="https://www.tiktok.com/@prim4l1ift" target="_blank"><i class="ri-tiktok-fill"></i></a>
             </div>
-            
         </div>
     </footer>
 
     
     <script src="https://kit.fontawesome.com/76a8b6d50a.js" crossorigin="anonymous"></script>
     <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
-    <script src="skrypt.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

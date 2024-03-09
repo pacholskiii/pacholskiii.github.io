@@ -151,5 +151,14 @@ function writeHTML(results, section){
                 section.appendChild(results);  
 }
 
+// nav
 
+let btn = document.querySelector(".hamburger");
+let links = document.querySelector(".nav-links");
+let header = document.querySelector(".header")
+
+btn.addEventListener('click', () => {
+    links.classList.toggle("active");
+    header.classList.toggle("active2")
+}); 
 

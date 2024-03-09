@@ -20,6 +20,18 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        0:{
+          slidesPerView: 1,
+        },
+        975:{
+          slidesPerView: 2,
+        },
+        1290:{
+          slidesPerView: 3,
+        }
+      
+      }
   });
 
 // Card click

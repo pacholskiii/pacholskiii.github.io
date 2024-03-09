@@ -50,7 +50,12 @@ normyBtn.addEventListener("click", () => {
 // Animations
 
 let bmiInfoInerval = setInterval(function(){
-    if(bmiContainer.getBoundingClientRect().bottom <= 890){
+   
+}, 1000/60)
+
+window.addEventListener("scroll", () =>{
+    console.log(bmiContainer.getBoundingClientRect().top);
+    if(bmiContainer.getBoundingClientRect().top <= 783){
         bmiContainer.style.visibility = "visible";
         bmiContainer.classList.add("animation-bmi");
         clearInterval(bmiInfoInerval);
@@ -58,7 +63,16 @@ let bmiInfoInerval = setInterval(function(){
         
     }
    
-}, 1000/60)
+}); 
 
+// nav
 
+let btn = document.querySelector(".hamburger");
+let links = document.querySelector(".nav-links");
+let header = document.querySelector(".header");
+
+btn.addEventListener('click', () => {
+    links.classList.toggle("active");
+    header.classList.toggle("active2");
+}); 
 

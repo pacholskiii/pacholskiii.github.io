@@ -44,11 +44,10 @@ nav{
     gap: 2rem;
     font-family: 'Kanit', sans-serif;
     padding: 0 50px;
+    position: relative;
+   
 }
 
-#index{
-    display: none;
-}
 .nav-logo{
     margin-top: 20px;
     max-width: 150px;
@@ -70,7 +69,28 @@ nav{
     background-color: #4E0F0F;
     padding: 20px;
 }
+nav .hamburger{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+nav .hamburger .line{
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
 
+nav .hamburger .line:nth-child(1){
+    top: 0;
+}
+nav .hamburger .line:nth-child(3){
+    bottom: 0;
+}
 
 
 .link a{
@@ -98,13 +118,19 @@ nav{
     width: 70%;
 }
 
+
+
 header .header{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     height: 75vh;
+    transition: all .3s ease;
 
+}
+.header.active2{
+    margin-top: 150px;
 }
 header .header h1{
     margin-top: 70px;;
@@ -427,25 +453,23 @@ select, input{
    
 }
 @media screen and (max-width: 1215px){
-     nav{
-        padding-top: 30px;   
-       
-    }
     .nav-logo{
-        display: none;
+        margin-top: 20px;
+        max-width: 120px;
+        max-height: 120px;
     }
-    .nav-links{
-        padding: 30px;
+    .link a{
+        font-size: 20px;
     }
+  
     .header img{
         display: none;
     }
-    #index{
-        display: block;
-    }
+   
    
     .header{
         align-items: center;
+        margin-bottom: 60px;
     }
     .pole-gora{
         width: 100%;
@@ -491,35 +515,54 @@ select, input{
         font-size: 24px;
     }
 }
-@media screen and (max-width: 730px){
-    nav{
-        margin-bottom: 30px;;   
+@media screen and (max-width: 966px){
+   
+    .nav-links a{
+        font-size: 18px;
+       
     }
     .nav-links{
-        padding: 30px;
-        flex-direction: column;
+        display: flex;
         justify-content: center;
     }
+    .nav-logo{
+      
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .header{
+        margin-bottom: 100px;
+    }
+   
 }
 @media screen and (max-width: 500px){
-    .waves{
-        margin-top: 50px;
+
+    nav .hamburger{
+        display: flex;
+       
     }
     .nav-links{
         border-radius: 0;
-    }
-    nav{
-        padding: 0;
-        border-bottom: 2px solid gray;
-    }
-    .nav-links{
-        flex-direction: column;
-        padding: 12px;
-        line-height: 30px;
         width: 100%;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: -200%;
+        left: 0;
         background-color: transparent;
+        background-repeat: no-repeat;  
+        box-shadow: 0px 6px 12px -1px rgba(231, 65, 53, 0.24); 
+       
+        z-index: 9999;
+        transition: all .3s ease;
     }
-  
+    .nav-links.active{
+        top: 100%;
+    }
+
+    .waves{
+        margin-top: 50px;
+    } 
     #calculator-section{
        padding: 8px;
     }
@@ -529,5 +572,8 @@ select, input{
     }
     .lower-wave{
         transform: translateY(-5%); 
+    }
+    .wyniki-blank{
+        font-size: 36px;
     }
 }

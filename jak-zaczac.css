@@ -34,17 +34,17 @@ body{
     background-attachment: fixed; */
 }
 
-
 nav{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-   
     align-items: center;
     gap: 2rem;
     font-family: 'Kanit', sans-serif;
-    padding: 0 70px;
+    padding: 0 50px;
+    position: relative;
+   
 }
 
 .nav-logo{
@@ -58,7 +58,6 @@ nav{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 15px;
     font-size: 18px;
     width: 100%;
@@ -69,13 +68,34 @@ nav{
     background-color: #4E0F0F;
     padding: 20px;
 }
+nav .hamburger{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+nav .hamburger .line{
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
 
+nav .hamburger .line:nth-child(1){
+    top: 0;
+}
+nav .hamburger .line:nth-child(3){
+    bottom: 0;
+}
 
 
 .link a{
     font-size: 24px;;
     position: relative;
-    padding: 0 30px;
+    padding-bottom: 0.75rem;
     color: #fff;
     transition: all 0.3s ease-in-out;
 }
@@ -107,6 +127,7 @@ header .header{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s ease;
 }
 .header .opis{
     margin-left: 75px;
@@ -769,22 +790,16 @@ text-align: center;
     }
 }
 @media screen and (max-width: 1240px){
-    nav{
-        padding-top: 30px;   
-       
-    }
     .nav-logo{
-        display: none;
+        margin-top: 20px;
+        max-width: 120px;
+        max-height: 120px;
     }
-    .nav-links{
-        padding: 30px;
-        
+    .link a{
+        font-size: 20px;
     }
     .header img{
         display: none;
-    }
-    #index{
-        display: block;
     }
     #poczatki-treningu .container .entry h1{
         font-size: 42px;
@@ -829,6 +844,21 @@ text-align: center;
     }
 }
 @media screen and (max-width: 1020px){
+
+    .nav-links a{
+        font-size: 18px;
+       
+    }
+    .nav-links{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-logo{
+      
+        max-width: 100px;
+        max-height: 100px;
+    }
+
     .list .item img{
         width: 150px;
         height: 150px;
@@ -926,6 +956,35 @@ text-align: center;
     }
 }
 @media screen and (max-width: 530px){
+
+    nav .hamburger{
+        display: flex;
+       
+    }
+    .nav-links{
+        border-radius: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: -200%;
+        left: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;  
+        box-shadow: 0px 6px 12px -1px rgba(231, 65, 53, 0.24); 
+       
+        z-index: 9999;
+        transition: all .3s ease;
+    }
+    .nav-links.active{
+        top: 100%;
+    }
+    .header .opis{
+        margin-top: 100px;
+    }
+    .header.active2{
+        margin-top: 170px;
+    }
     .point .image-container{
         display: none;
     }
@@ -933,4 +992,5 @@ text-align: center;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
     }
+    
 }

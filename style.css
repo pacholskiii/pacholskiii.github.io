@@ -11,6 +11,7 @@
 a{
     color: white;
     text-decoration: none;
+  
 }
 img{
     width: 100%;
@@ -29,19 +30,18 @@ body{
 html{
     scroll-behavior: smooth;
 }
-#index{
-    display: none;
-}
+
 nav{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-  
     align-items: center;
     gap: 2rem;
     font-family: 'Kanit', sans-serif;
     padding: 0 50px;
+    position: relative;
+   
 }
 
 .nav-logo{
@@ -65,6 +65,29 @@ nav{
     background-color: #4E0F0F;
     padding: 20px;
 }
+nav .hamburger{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+nav .hamburger .line{
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+nav .hamburger .line:nth-child(1){
+    top: 0;
+}
+nav .hamburger .line:nth-child(3){
+    bottom: 0;
+}
+
 
 .link a{
     font-size: 24px;;
@@ -74,8 +97,9 @@ nav{
     transition: all 0.3s ease-in-out;
 }
 .link a:hover{
-    font-size: 26px;
+    font-size: 22px;
 }
+
 .link a::after{
     content: "";
     position: absolute;
@@ -89,10 +113,19 @@ nav{
 .link a:hover::after{
     width: 70%;
 }
+
+
+
+
+
+
+
+
+
 .home-section{
     position: relative;
     width: 90%;
-   
+    margin-top: 40px;
     padding: 0 100px;
     min-height: 90vh;
     margin-left: auto;
@@ -110,11 +143,13 @@ nav{
     display: none;
 }
 .home-container{
+    position: relative;
     display: flex;
     justify-content: center;
     font-size: 20px;
     width: 100%;
     min-height: 800px;
+    transition: all .3s ease;
 }
 .info{
     display: flex;
@@ -132,6 +167,7 @@ nav{
     font-size: 1.2em;
     color: rgb(170, 169, 169);
 }
+
 .circles{
     width: 45%;
     position: relative;
@@ -181,20 +217,22 @@ nav{
 
 
 .information{
-    width: 1500px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+   
 }
-.information .info-section img{
-    max-width: 550px;
-    max-height: 550px;
-}
+
 .information .info-section{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 100px;
     color: #fff;
+   
 }
+
+
 .information .info-section h1{
     margin-top: 80px;
     font-size: 62px;
@@ -204,15 +242,11 @@ nav{
     font-size: 22px;
     letter-spacing: 1px;  
 }
-.information .info-section #kontakt{
-    margin-top: 100px;
-   
-}
 
 .footer{
     display: flex;
     flex-direction: column;
-    
+   
     margin-top: 150px;
     width: 100%;
     align-items: center;
@@ -231,10 +265,12 @@ nav{
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
+   
 }
 .footer .nav-footer .item{
     padding: 20px;
     transition: all .3s ease;
+  
 }
 .footer .nav-footer .item a{
     font-size: 32px;
@@ -281,52 +317,149 @@ nav{
     .footer .nav-footer .item a{
         font-size: 24px;
     }
-}
-@media screen and (max-width: 966px){
-    .home-container .info h1{
-        font-size: 3em;;
-    }
-    .home-section{
-        padding: 0;
-    }
-    .nav-logo{
-        display: none;
-    }
-    #index{
-        display: block;
-    }
-    nav{
-        padding-top: 30px;   
-    }
-    .nav-links{
-        padding: 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-   
-}
-@media screen and (max-width: 560px){
-    .nav-links{
-        border-radius: 0;
-    }
-    nav{
-        padding: 0;
-        border-bottom: 2px solid gray;
-    }
-    .nav-links{
-        flex-direction: column;
-        padding: 12px;
-        line-height: 30px;
-        width: 100%;
-        background-color: transparent;
-    }
     .info{
         width: 100%;
-        text-align: center;
-        margin-top: 100px;
+        padding: 0 20px;
+    }
+    .information .info-section{
+        padding: 20px 0;
+    }
+    .information .info-section h1{
+        font-size: 48px;
+    }
+    .information .info-section p{
+        font-size: 19px;
+    }
+    .information .info-section img{
+        max-width: 450px;
+    }
+  
+}
+@media screen and (max-width: 1210px){
+    .nav-logo{
+        margin-top: 20px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+    .link a{
+        font-size: 20px;
+    }
+    .information .info-section{
+        padding: 20px 0;
+    }
+    .information .info-section h1{
+        font-size: 44px;
+    }
+    .information .info-section p{
+        font-size: 17px;
+    }
+    .information .info-section img{
+        max-width: 400px;
+    }
+    
+}
+@media screen and (max-width: 966px){
+    .nav-links a{
+        font-size: 18px;
+       
+    }
+    .nav-links{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-logo{
+      
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .home-container .info h1{
+        font-size: 4em;
         
     }
+  
+    .home-section{
+        margin-top: 0;
+        padding: 0;
+    }
    
-    
+    .home-container{
+        min-height: 0px;
+    }
+    .info{
+        font-size: 16px;
+         
+     }
+     .information .info-section{
+        
+       gap: 0;
+        flex-direction: column;
+       
+    }
+   
+    .information .info-section p{
+        font-size: 17px;
+    }
+    .information .info-section h1{
+        font-size: 42px;
+    }
+    .information .info-section img{
+        max-width: 350px;
+        padding: 0;
+        
+    }
+    #o-nas{
+        order: 0;
+    }
+   
+    #konakt{
+        order: 0;
+       
+    }
+    .order{
+        order: 1;
+    }
+   
+}
+
+
+@media screen and (max-width: 560px){
+   
+
+    nav .hamburger{
+        display: flex;
+       
+    }
+    .nav-links{
+        border-radius: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: -200%;
+        left: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;  
+        box-shadow: 0px 6px 12px -1px rgba(231, 65, 53, 0.24); 
+       
+        z-index: 9999;
+        transition: all .3s ease;
+    }
+    .nav-links.active{
+        top: 100%;
+    }
+    .home-container.active2{
+            margin-top: 100px;
+    }
+    .home-container .info h1{
+        font-size: 3.6em
+    }
+    .information .info-section {
+       padding: 10px;
+    }
+    .training-plans-container{
+        min-height: 130vh;
+    }
+   
+
 }
 

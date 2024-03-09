@@ -34,9 +34,6 @@ body{
     overflow-x: hidden;
     
 }
-#index{
-    display: none;
-}
 nav{
     max-width: 1600px;
     margin-left: auto;
@@ -46,6 +43,8 @@ nav{
     gap: 2rem;
     font-family: 'Kanit', sans-serif;
     padding: 0 50px;
+    position: relative;
+   
 }
 
 .nav-logo{
@@ -69,6 +68,29 @@ nav{
     background-color: #4E0F0F;
     padding: 20px;
 }
+nav .hamburger{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+nav .hamburger .line{
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+nav .hamburger .line:nth-child(1){
+    top: 0;
+}
+nav .hamburger .line:nth-child(3){
+    bottom: 0;
+}
+
 
 .link a{
     font-size: 24px;;
@@ -78,8 +100,9 @@ nav{
     transition: all 0.3s ease-in-out;
 }
 .link a:hover{
-    font-size: 26px;
+    font-size: 22px;
 }
+
 .link a::after{
     content: "";
     position: absolute;
@@ -94,6 +117,34 @@ nav{
     width: 70%;
 }
 
+
+.link a{
+    font-size: 24px;;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.link a:hover{
+    font-size: 22px;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #d1daf5;
+    transition: all 0.3s ease;
+}
+.link a:hover::after{
+    width: 70%;
+}
+
+
+
  
 .header img{
     width: 500px;
@@ -102,11 +153,12 @@ nav{
 }
 
 header .header{
-    width: 90%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     height: 100vh;
+    transition: all .3s ease;
 }
 header .header h1{
     margin-top: 60px;
@@ -120,6 +172,9 @@ header .header p{
     font-size: 28px;
     color: white;
 }
+.header.active2{
+    margin-top: 200px;
+}
 .obrazek{
     width: 450px;
     height: 450px;
@@ -131,9 +186,9 @@ header .header p{
     margin-left: 200px;
     width: 100%;
     margin-top: 70px;;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     color: white;
-    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+   
     margin-bottom: 40px;
 }
 #calculator-section{
@@ -291,13 +346,14 @@ article{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
+    visibility:hidden;
     width: 100%;
     background-color: white;
     padding: 28px;
     border-radius: 12px;
     text-align: center;
-    margin-top: -39px;
+    margin-top: 50px 0;
+   
 }
 .kontener-bmi h1{
     font-size: 34px;
@@ -415,31 +471,30 @@ article{
     
 }
 
-@media screen and (max-width: 1506px){
+@media screen and (max-width: 1600px){
     .header .opis h1{
         font-size: 44px;
     }
     .header .opis p{
-        font-size: 28px;
+        font-size: 26px;
     }
     .header .opis b{
         font-size: 28px;
     }
+    .kontener-bmi{
+       margin-top: 100px;
+    }
 }
 @media screen and (max-width: 1250px){
-     nav{
-        margin-top: 50px;
-    }
-    .nav-links{
-        padding: 30px;
-        justify-content: center;
-    }
     .nav-logo{
-        display: none;
+        margin-top: 20px;
+        max-width: 120px;
+        max-height: 120px;
     }
-    #index{
-        display: block;
+    .link a{
+        font-size: 20px;
     }
+    
     #calculator-section{
         display: flex;
         justify-content: center;
@@ -460,12 +515,8 @@ article{
     .header .opis h1{
         font-size: 62px;
     }
-    .header .opis p{
-        font-size: 28px;
-    }
-    .header .opis b{
-        font-size: 28px;
-    }
+   
+   
    
     .header img{
         display: none;
@@ -475,21 +526,80 @@ article{
         width: 100%;
         justify-content: center;
     }
+   .kontener-bmi{
+    margin: 50px 0;;
+   }
+}
+@media screen and (max-width: 966px){
+    .nav-links a{
+        font-size: 18px;
+       
+    }
+    .nav-links{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-logo{
+      
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .kontener-bmi{
+        margin: 80px 0;;
+       }
 }
 @media screen and (max-width: 578px){
    
+    nav .hamburger{
+        display: flex;
+       
+    }
+    .nav-links{
+        border-radius: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: -200%;
+        left: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;  
+        box-shadow: 0px 6px 12px -1px rgba(231, 65, 53, 0.24); 
+        z-index: 9999;
+        transition: all .3s ease;
+    }
+    .nav-links.active{
+        top: 100%;
+    }
     .header .opis h1{
         font-size: 40px;
     }
-    .header .opis p{
-        font-size: 28px
+    .header .opis p,
+    .header .opis b
+    {
+        text-align:left;
+        font-size: 20px
     }
-    .header .opis{
-        height: 100vh;
-       
-    }
+    
+   
+     .kontener-bmi p{
+      
+         font-size: 24px;
+     }
+     .kontener-bmi{
+        margin: 0;;
+       }
+    
 }
 @media screen and (max-width: 460px){
+
+
+    .opis{
+        width: 100%;
+     }
+    
+ 
+    
     .upper-wave{
         transform: translateY(7%);
     }
@@ -499,40 +609,18 @@ article{
     .kalkulator .oblicz{
        margin-top: 50px;
     }
-    .nav-links{
-        border-radius: 0;
-    }
-    nav{
-        margin-top: 0;
-        width: 100%;
-        padding: 0;
-        border-bottom: 2px solid gray;
-    }
     article{
         width: 100%;
         padding: 20px;
        
     }
-    .normy-bmi p{
-        font-size: 20px;
+    .kontener-bmi{
+        margin: 20% 0;
     }
-    .normy-bmi span{
-        font-size: 20px;
+    .kontener-bmi p{
+      
+        font-size: 21px;
     }
-    .nav-links{
-        flex-direction: column;
-        padding: 12px;
-        line-height: 30px;
-        width: 100%;
-        background-color: transparent;
-    }
-    .opis{
-       width: 100%;
-    }
-    .header .opis p{
-        font-size: 24px;
-    }
-    .header .opis span{
-        font-size: 24px;
-    }
+    
+ 
 }

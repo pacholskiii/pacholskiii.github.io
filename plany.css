@@ -33,23 +33,23 @@ body{
     background-image: linear-gradient(171deg, rgba(52, 117, 187, 1) 10%, rgba(32, 41, 95, 1) 89%);
     background-repeat: no-repeat;
     background-attachment: fixed; */
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
 }
-#index{
-    display: none;
-}
+
 nav{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-  
     align-items: center;
     gap: 2rem;
     font-family: 'Kanit', sans-serif;
     padding: 0 50px;
+    position: relative;
+   
 }
 
 .nav-logo{
@@ -73,6 +73,29 @@ nav{
     background-color: #4E0F0F;
     padding: 20px;
 }
+nav .hamburger{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+nav .hamburger .line{
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+nav .hamburger .line:nth-child(1){
+    top: 0;
+}
+nav .hamburger .line:nth-child(3){
+    bottom: 0;
+}
+
 
 .link a{
     font-size: 24px;;
@@ -82,8 +105,9 @@ nav{
     transition: all 0.3s ease-in-out;
 }
 .link a:hover{
-    font-size: 26px;
+    font-size: 22px;
 }
+
 .link a::after{
     content: "";
     position: absolute;
@@ -98,12 +122,20 @@ nav{
     width: 70%;
 }
 
+
+
+
+
+
 .home-section{
-    max-width: 1500px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     min-height: 70vh;
     padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   
 }
 .home-section img{
@@ -128,26 +160,36 @@ nav{
     font-size: 24px;
 }
 .training-plans-parameters-container{
-    max-width: 1550px;
+    max-width: 1700px;
     margin-left: auto;
     margin-right: auto;
-    height: 50vh;
     color: #fff;
-   
 }
 .training-plans-parameters-container .header{
     text-align: center;
     margin-bottom: 40px;
 }
+
 .training-plans-parameters-container ul{
-    list-style-type: none;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    gap: 80px;
+    justify-content: center; /* Wyśrodkuj elementy względem osi poziomej */
+    text-align: center; /* Dodaj wyśrodkowanie tekstu */
+    padding: 0 40px;
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+}
+.parameters-list{
+    width: 100%;
+    
+    margin: 0 auto; /* Wyśrodkuj kontener */
+ 
 }
 .training-plans-parameters-container ul li{
     list-style-type: none;
-    min-height: 250px;
-    min-width: 250px;
+    height: 250px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -177,11 +219,13 @@ nav{
 .training-plans-parameters-container p{
     font-size: 28px;
 }   
-
+.inner-top-wave{
+   
+}
 .inner-body-wave{
     transform: translateY(-10px);
     background-color: #D34949;
-    min-height: 80vh;
+    min-height: 60vh;
     width: 100%;
 }
 .inner-bottom-wave{
@@ -191,8 +235,11 @@ nav{
 .training-plans-section .body-wave{
     transform: translateY(-10px);
     background-color: #D22D2D;
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100%;
+}
+.waves-container{
+    transform: translateY(-350px);
 }
 .training-plans-section .lower-wave{
     transform: translateY(-10px);
@@ -201,7 +248,7 @@ nav{
     max-width: 1350px;
     margin-left: auto;
     margin-right: auto;
-   height: 90vh;
+   height: 120vh;
    margin-bottom: 200px;
 }
 .training-plans-container > h1{
@@ -221,7 +268,7 @@ nav{
 }
 .swiper {
     width: 100%;
-    height: 100%;
+    height: 1000px;
   }
 
   .swiper-slide {
@@ -248,12 +295,18 @@ nav{
    
     background-color: rgb(236, 167, 62);
 }
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     padding: 15px;
+   
   }
  
 
@@ -320,7 +373,7 @@ nav{
 .plans-dropdown-section{
     margin-top: 300px;
     max-width: 1400px;
-    min-height: 40vh;
+    min-height: 80vh;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -333,7 +386,7 @@ nav{
 }
 
 .plans-dropdown-section .accordion-table-container{
-    max-height: 2000px;
+    max-height: 2400px;
     transition: all 1s ease;
     overflow: hidden;
     
@@ -378,6 +431,7 @@ nav{
     box-shadow: 8px 8px 24px -11px rgba(66, 68, 90, 1);
     padding: 0 50px;
     border-spacing: 0;
+    min-height: 120vh;
 }
 .plans-dropdown-section .accordion-header .ch-d{
     transition: all 0.7s ease;
@@ -462,4 +516,94 @@ nav{
 .footer i:hover{
     
    transform: scale(90%);
+}
+
+
+@media screen and (max-width: 1500px){
+    .home-section{
+        width: 100%;
+    }
+    .home-desc h1{
+        font-size: 52px;
+    }
+    .home-desc p{
+        font-size: 22px;
+    }
+    .home-section img{
+        width: 80%;
+        height: 80%;
+    } 
+    .training-plans-section .body-wave{
+       
+        min-height: 145vh;
+       
+    }
+    .training-plans-container{
+        max-width: 95%;
+    }
+}
+@media screen and (max-width: 1290px){
+    .home-section img{
+        display: none;
+    }
+  
+    .waves-container{
+        transform: translateY(-250px);
+    }
+    .body-wave{
+      
+        padding-bottom:  300px 0;
+    }
+    .training-plans-container{
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 850px){
+  
+    .waves-container{
+        transform: translateY(-150px);
+    }
+    .body-wave{
+        padding: 200px 0;
+    }
+    .training-plans-container{
+        max-width: 80%;
+    }
+    .training-plans-container > h1{
+        font-size: 46px;
+    }
+    .swiper-slide .level{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 460px){
+    .swiper-slide .level{
+        width: 55%;
+    }
+    .training-plans-container{
+        max-width: 78%;
+    }
+    .plan-desc h1{
+        font-size: 22px;
+    }
+    .swiper-slide img {
+        width: 120%;
+        height: 120%;
+    }
+    .swiper-slide{
+        padding: 10px;
+    }
+}
+
+/* height */
+
+@media screen and (max-height: 950px) and (max-width: 600px){
+    .swiper{
+       height: 1100px;
+    }
+    .swiper-slide .plan-desc{
+        height: 550px;
+    }
+    
 }
