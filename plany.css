@@ -136,7 +136,11 @@ nav .hamburger .line:nth-child(3){
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  
+    transition: all .3s ease;
+}
+.home-section.active2{
+    margin-top: 150px;
+   
 }
 .home-section img{
     max-width: 450px;
@@ -372,8 +376,8 @@ nav .hamburger .line:nth-child(3){
 
 .plans-dropdown-section{
     margin-top: 300px;
-    max-width: 1400px;
-    min-height: 80vh;
+    max-width: 2000px;
+  
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -487,7 +491,7 @@ nav .hamburger .line:nth-child(3){
     transition: all .3s ease;
 }
 .footer .nav-footer .item a{
-    font-size: 32px;
+    font-size: 28px;
     color: #fff;
     transition: .3s ease;
 }
@@ -543,6 +547,15 @@ nav .hamburger .line:nth-child(3){
     }
 }
 @media screen and (max-width: 1290px){
+    .nav-logo{
+        margin-top: 20px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+    .link a{
+        font-size: 20px;
+    }
+
     .home-section img{
         display: none;
     }
@@ -557,8 +570,35 @@ nav .hamburger .line:nth-child(3){
     .training-plans-container{
         max-width: 90%;
     }
-}
+    .accordion{
+        margin: 0 30px;
+    }
+    .plans-dropdown-section .accordion , th{
+        padding: 15px 5px;
+     }
+     .plans-dropdown-section .accordion table tr td{
+        padding: 30px 0;
+     }
+    .plans-dropdown-section .accordion-body tr th{
+        font-size: 26px;
+     }
 
+}
+@media screen and (max-width: 950px){
+.nav-links a{
+        font-size: 18px;
+       
+    }
+    .nav-links{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-logo{
+      
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
 @media screen and (max-width: 850px){
   
     .waves-container{
@@ -576,6 +616,55 @@ nav .hamburger .line:nth-child(3){
     .swiper-slide .level{
         width: 45%;
     }
+    .plans-dropdown-section .accordion table tr td{
+        font-size: 17px;
+        padding: 15px 0;
+       
+     }
+     .accordion-header h1{
+     font-size: 28px;
+    }
+    .plans-dropdown-section .accordion-header{
+        margin-top: 50px;
+    }
+     
+}
+@media screen and (max-width: 620px){
+   
+    nav .hamburger{
+        display: flex;
+       
+    }
+    .nav-links{
+        border-radius: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: -200%;
+        left: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;  
+        box-shadow: 0px 6px 12px -1px rgba(231, 65, 53, 0.24); 
+       
+        z-index: 9999;
+        transition: all .3s ease;
+    }
+    .nav-links.active{
+        top: 100%;
+    }
+    
+    .plans-dropdown-section .accordion-body tr th{
+        font-size: 20px;
+     }
+     .plans-dropdown-section .accordion table tr td{
+        font-size: 16px;
+     }
+     .accordion-header h1{
+        font-size: 22px;
+       
+       }
+
 }
 @media screen and (max-width: 460px){
     .swiper-slide .level{
@@ -594,6 +683,29 @@ nav .hamburger .line:nth-child(3){
     .swiper-slide{
         padding: 10px;
     }
+    .accordion{
+        margin: 0;
+      
+    }
+    .plans-dropdown-section .accordion-body tr th{
+        font-size: 16px;
+     }
+     .plans-dropdown-section .accordion table tr td{
+       
+        padding: 5px 0;
+       
+     }
+     .accordion-header h1{
+        font-size: 75%;
+     }
+    .accordion-header .ch-d{
+        font-size: 26px !important;
+      
+    }
+    .plans-dropdown-section .accordion .day td{
+        padding: 10px 0;
+    }
+     
 }
 
 /* height */

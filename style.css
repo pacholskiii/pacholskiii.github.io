@@ -252,7 +252,7 @@ nav .hamburger .line:nth-child(3){
     align-items: center;
     min-height: 200px;
     color: white;
-    font-size: 38px;
+    font-size: 32px;
     padding: 15px;
     justify-content: center;
     background-color: rgba(130, 16, 16, 1);
@@ -273,7 +273,7 @@ nav .hamburger .line:nth-child(3){
   
 }
 .footer .nav-footer .item a{
-    font-size: 32px;
+    font-size: 28px;
     color: #fff;
     transition: .3s ease;
 }

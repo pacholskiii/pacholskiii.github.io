@@ -69,3 +69,13 @@ ch_d.forEach((chevron, index) => {
   });
 });
 
+// nav
+
+let btn = document.querySelector(".hamburger");
+let links = document.querySelector(".nav-links");
+let home = document.querySelector(".home-section")
+
+btn.addEventListener('click', () => {
+    links.classList.toggle("active");
+    home.classList.toggle("active2")
+}); 

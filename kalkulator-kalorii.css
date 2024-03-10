@@ -382,7 +382,7 @@ select, input{
     transition: all .3s ease;
 }
 .footer .nav-footer .item a{
-    font-size: 32px;
+    font-size: 28px;
     color: #fff;
     transition: .3s ease;
 }
