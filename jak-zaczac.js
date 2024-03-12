@@ -14,6 +14,7 @@ let btnClose = document.querySelectorAll(".btn-close");
 btnArrow.forEach((btn, index) => {
     btn.addEventListener("click", () =>{
         modals[index].classList.add("active")
+        document.body.style.overflow = "hidden";
       
     });
 });
@@ -23,6 +24,7 @@ btnClose.forEach(btn => {
         
         modals.forEach((modal) =>{
             modal.classList.remove("active");
+            document.body.style.overflow = "auto";
         })
     })
     

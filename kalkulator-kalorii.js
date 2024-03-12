@@ -11,13 +11,15 @@ let wynikiMacro = document.querySelector("#wyniki-macro");
 let wynikiBlank = document.querySelector(".wyniki-blank");
 
 let calories;
-let protein, proteinCalories;
-let fat, fatCalories;
-let carbs, carbsCalories;
+let proteinCalories;
+let fatCalories;
+let carbsCalories;
+
+let protein, fat, carbs = "";
 
 let ppmM;
 let ppmK;
-let baseCalories
+let baseCalories = ""
 
 
 
@@ -32,13 +34,14 @@ oblicz.addEventListener("click", () => {
         setTimeout(() => {
             oblicz.innerHTML = "Oblicz";
         }, 3000);
-       
+     
        
     }
     else if(!wyniki){
+       
           
-          writeAnswers();
           calculateCalories();
+         
           wynikiBlank.classList.add("animation-wyniki-blank");
             wynikiBlank.style.display = "none";
     }
@@ -65,49 +68,76 @@ const PPM_K = () =>{
     return ppmK;
 }
 
-function calculateMacros(weight){
-    
+
+
+function calculateCalories(){
+
+    let section = document.querySelector("#wyniki-macro");
+    let results = document.createElement('div');
+   
+   
+
+    if (section.querySelector('.wyniki')) {
+        section.removeChild(section.querySelector('.wyniki'));
+        
+        //BASE CALORIES
+
+        let optionsPhysical = document.querySelector("#aktywnosc");
+        let selectedIndex = optionsPhysical.selectedIndex + 1;
+        let physicalFactor = optionsPhysical[selectedIndex - 1].value;
+        console.log("Physical factor: " + physicalFactor);
+
+        if(plec.value == "Mężczyzna"){
+            baseCalories = PPM_M() * physicalFactor;
+        }
+        else{
+            baseCalories = PPM_K() * physicalFactor;
+        }
+        calculateMacros();
+
+        writeHTML(results, section);
+       
+    }
+    else{
+        
+        section.classList.add("active");
+
+        //BASE CALORIES
+
+        let optionsPhysical = document.querySelector("#aktywnosc");
+        let selectedIndex = optionsPhysical.selectedIndex + 1;
+        let physicalFactor = optionsPhysical[selectedIndex - 1].value;
+        console.log("Physical factor: " + physicalFactor);
+
+        if(plec.value == "Mężczyzna"){
+            baseCalories = PPM_M() * physicalFactor;
+        }
+        else{
+            baseCalories = PPM_K() * physicalFactor;
+        }
+        calculateMacros();
+
+        writeHTML(results, section);
+        
+    }
+   
+   
+}
+
+function calculateMacros(){
+   
     protein = Math.floor((baseCalories * 0.2) / 4);
-    fat = Math.floor((baseCalories * 0.3) / 9);
-    carbs = Math.floor((baseCalories * 0.5) / 4);
+   fat = Math.floor((baseCalories * 0.3) / 9);
+   carbs = Math.floor((baseCalories * 0.5) / 4);
+    
+   
     
  }
  
 
-function calculateCalories(){
-
-   
-    calculateMacros(parseFloat(masa.value));
-
-
-    let section = document.querySelector("#wyniki-macro");
-    section.classList.add("active");
-    let results = document.createElement('div');
-
-    if (section.querySelector('.wyniki')) {
-        section.removeChild(section.querySelector('.wyniki'));
-        writeHTML(results, section);
-    }
-    else{
-        writeHTML(results, section);
-    }
-
-   
-}
-
 function writeHTML(results, section){
 
-    
-    let optionsPhysical = document.querySelector("#aktywnosc");
-    let selectedIndex = optionsPhysical.selectedIndex + 1;
-    let physicalFactor = optionsPhysical[selectedIndex - 1].value;
-
-    if(plec.value == "Mężczyzna"){
-        baseCalories = PPM_M() * physicalFactor;
-    }
-    else{
-        baseCalories = PPM_K() * physicalFactor;
-    }
+   
 
     let goalValue = document.querySelector("#cel");
     let selectedGoalIndex = goalValue.selectedIndex;
@@ -115,6 +145,8 @@ function writeHTML(results, section){
    
     let goalText = goalValue[selectedGoalIndex].text;
     console.log(goalText);
+    console.log(parseFloat(protein));
+  
 
     results.classList.add("wyniki", "animation-wyniki");
     results.innerHTML =  `
