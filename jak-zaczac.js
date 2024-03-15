@@ -3,15 +3,15 @@
 
 // Poczatki treningu
 
-let btnArrow = document.querySelectorAll(".btn-arrow");
+let item = document.querySelectorAll(".item-click");
 let modals = document.querySelectorAll(".modal-container");
-let items = document.querySelectorAll(".item");
+
 let value;
 let btnClose = document.querySelectorAll(".btn-close");
 
 
 
-btnArrow.forEach((btn, index) => {
+item.forEach((btn, index) => {
     btn.addEventListener("click", () =>{
         modals[index].classList.add("active")
         document.body.style.overflow = "hidden";
@@ -21,8 +21,8 @@ btnArrow.forEach((btn, index) => {
 
 btnClose.forEach(btn => {
     btn.addEventListener("click", () =>{
-        
-        modals.forEach((modal) =>{
+     
+        modals.forEach(modal =>{
             modal.classList.remove("active");
             document.body.style.overflow = "auto";
         })

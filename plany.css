@@ -134,6 +134,8 @@ nav .hamburger .line:nth-child(3){
     min-height: 70vh;
     padding: 100px 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     transition: all .3s ease;
@@ -164,7 +166,7 @@ nav .hamburger .line:nth-child(3){
     font-size: 24px;
 }
 .training-plans-parameters-container{
-    max-width: 1700px;
+    max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
     color: #fff;
@@ -224,7 +226,7 @@ nav .hamburger .line:nth-child(3){
     font-size: 28px;
 }   
 .inner-top-wave{
-   
+  
 }
 .inner-body-wave{
     transform: translateY(-10px);
@@ -239,7 +241,7 @@ nav .hamburger .line:nth-child(3){
 .training-plans-section .body-wave{
     transform: translateY(-10px);
     background-color: #D22D2D;
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
 }
 .waves-container{
@@ -387,6 +389,7 @@ nav .hamburger .line:nth-child(3){
 .plans-dropdown-section .accordion{
     padding: 20px 20px;
     display: none;
+    margin-top: 20px;
 }
 
 .plans-dropdown-section .accordion-table-container{
@@ -718,4 +721,22 @@ nav .hamburger .line:nth-child(3){
         height: 550px;
     }
     
+}
+
+/* 1440p */
+@media screen and (min-width: 2560px){
+    .training-plans-section .body-wave{
+       min-height: 70vh
+    }
+    .waves-container{
+        transform: translateY(-550px);
+    }
+    .training-plans-container{
+        height: 70vh;
+    }
+}
+@media screen and (min-width: 3300px){
+    .waves-container{
+        transform: translateY(-750px);
+    }
 }

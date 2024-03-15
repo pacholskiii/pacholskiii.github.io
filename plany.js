@@ -48,7 +48,13 @@ let ch_d = document.querySelectorAll(".ch-d")
 
 slides.forEach((slide, index) => {
     slide.addEventListener("click", () => {
+
+        accordion.forEach(item => {
+            item.style.display = "none";
+        })
         accordion[index].style.display = "block";
+        console.log("aa");
+        
         
     })
 }); 

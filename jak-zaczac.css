@@ -239,7 +239,7 @@ text-align: center;
 
  /* ------------------Sekcja Jak zaczac */
  #poczatki-treningu{
-    margin: 200px 0 300px 0;
+    margin: 200px 0 100px 0;
     min-height: 100vh;
     padding: 30px;
  }
@@ -249,11 +249,15 @@ text-align: center;
 }
 #poczatki-treningu .container .entry h1{
     font-size: 64px;
-    text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
+   
     margin-bottom: 20px;
+    text-shadow: 6px 3px 6px rgba(34, 34, 39, 1);
+}
+#poczatki-treningu .container .entry h2{
+    font-size: 32px;
 }
 #poczatki-treningu .container .entry p{
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 100px;
 }
 
@@ -274,6 +278,8 @@ text-align: center;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 #poczatki-treningu .container .list .item{
     
@@ -281,12 +287,14 @@ text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 75px 100px;
+    padding: 75px 50px;
+   
 }
 #poczatki-treningu .container .list .item h1{
     font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
+    width: 100%;
 }
 #poczatki-treningu .container .list .item i{
     margin-top: 10px;
@@ -346,7 +354,14 @@ text-align: center;
     font-size: 38px;
     
 }
+.item-click{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .btn-arrow{
+   
     animation: arrowDownAnimation 4s ease infinite;
 }
 
@@ -388,7 +403,7 @@ text-align: center;
     text-shadow: 4px 2px 0px rgba(66, 68, 90, 1);
 }
 .home p{
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
 }
 .home .description{
@@ -400,9 +415,10 @@ text-align: center;
     text-align: left;
    
 }
+
 .home .description p{
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 26px;
 }
 .home .description .styl-scroll-btn{
     text-align: center;
@@ -470,7 +486,7 @@ text-align: center;
 .points{ 
     min-height: 100vh;
     max-width: 1600px;
-    margin: 200px auto;
+    margin: 0 auto;
     padding: 30px;
 }
 .point{
@@ -524,7 +540,7 @@ text-align: center;
 /* ----------------------Sekcja silownia dla kazdego---------------------- */
 #silownia-dla-kazdego{
     padding-top: 50px;
-    margin: 300px 0 400px 0;
+    margin: 150px 0 400px 0;
     padding: 30px;
 }
 .home-silownia{
@@ -538,15 +554,17 @@ text-align: center;
 .home-silownia h1{
     font-size: 48px;
     margin-bottom: 20px;
+    text-shadow: 6px 3px 6px rgba(34, 34, 39, 1);
 }
 .home-silownia h2{
     text-align: center;
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    text-shadow: 6px 3px 6px rgba(34, 34, 39, 1);
 }
 .home-silownia p{
     text-align: left;
-    font-size: 22px;
+    font-size: 26px;
 }
 .cards-container{
     max-width: 1800px;
@@ -687,16 +705,16 @@ text-align: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
-.footer .nav-footer .item{
+.footer .nav-footer .f-item{
     padding: 20px;
     transition: all .3s ease;
 }
-.footer .nav-footer .item a{
+.footer .nav-footer .f-item a{
     font-size: 28px;
     color: #fff;
     transition: .3s ease;
 }
-.footer .nav-footer .item a:hover{
+.footer .nav-footer .f-item a:hover{
     color: rgba(255, 255, 255, 0.685);
    
 }
@@ -994,9 +1012,7 @@ text-align: center;
         align-items: center;
         gap: 50px;
     }
-    .swiper{
-      
-    }
+    
     
 }
 @media screen and (max-width: 530px){
@@ -1036,14 +1052,81 @@ text-align: center;
     .point .image-container{
         display: none;
     }
+    .home .description .styl-scroll-btn{
+      width: 70%;
+      padding: 15px;
+    }
     #poczatki-treningu .container .list ul{
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
+    }
+    #poczatki-treningu .container .list .item{
+        padding: 20px 0;
     }
     #poczatki-treningu .container .list .item .modal{
         font-size: 19px;
         padding: 15px 30px;
         width: 90%;
+    }
+    #poczatki-treningu .entry .title h1{
+        font-size: 32px;
+       
+    }
+    #poczatki-treningu .entry .title h2{
+        font-size: 24px;
+    }
+    #zdrowy-styl-zycia .home h1{
+        font-size: 32px;
+    }
+    #zdrowy-styl-zycia .home h2{
+        font-size: 24px;
+    }
+    #zdrowy-styl-zycia .description p{
+        font-size: 24px;
+    } 
+    #zdrowy-styl-zycia .home p{
+        font-size: 20px;
+    }
+    #points .point .description p{
+        font-size: 18px;
+    }
+    .cards-container .card-img,
+    .card .card-description {
+        flex: 1 1 100%;
+    }
+    .cards-container .card-img img{
+       padding: 15px;
+        width: 60%;
+    }
+    #silownia-dla-kazdego{
+        padding: 0;
+    }
+    .home-silownia{
+        padding: 20px;
+    }
+    .card-img{
+       border-radius: initial !important;
+    }
+    .card-description{
+       border-radius: initial !important;
+    }
+    .card .card-description h1{
+        font-size: 28px;
+    }
+    .card .card-description p{
+        font-size: 22px;
+    }
+
+
+    #silownia-dla-kazdego .description-container {
+       
+        text-align: center;
+    }
+    #silownia-dla-kazdego .description-container h1{
+        font-size: 26px;
+    }
+    #silownia-dla-kazdego .description-container h2{
+        font-size: 24px;
     }
     
 }
