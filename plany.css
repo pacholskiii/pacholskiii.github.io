@@ -33,7 +33,7 @@ body{
     background-image: linear-gradient(171deg, rgba(52, 117, 187, 1) 10%, rgba(32, 41, 95, 1) 89%);
     background-repeat: no-repeat;
     background-attachment: fixed; */
-    overflow-x: hidden;
+   overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
@@ -251,10 +251,10 @@ nav .hamburger .line:nth-child(3){
     transform: translateY(-10px);
 }
 .training-plans-container{
-    max-width: 1350px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-   height: 120vh;
+  
    margin-bottom: 200px;
 }
 .training-plans-container > h1{
@@ -336,6 +336,7 @@ nav .hamburger .line:nth-child(3){
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    position: relative;
     
 }
 .swiper-slide .plan-desc h1{
@@ -363,6 +364,7 @@ nav .hamburger .line:nth-child(3){
 .swiper-button-prev::after{
    display: none;   
 }
+
 .swiper-button-next i,
 .swiper-button-prev i{
     font-size: 102px;
@@ -378,10 +380,6 @@ nav .hamburger .line:nth-child(3){
 
 .plans-dropdown-section{
     margin-top: 300px;
-    max-width: 2000px;
-  
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     justify-content: center;
     padding-bottom: 150px;
@@ -389,14 +387,13 @@ nav .hamburger .line:nth-child(3){
 .plans-dropdown-section .accordion{
     padding: 20px 20px;
     display: none;
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .plans-dropdown-section .accordion-table-container{
     max-height: 2400px;
     transition: all 1s ease;
-    overflow: hidden;
-    
+   
 }
 .accordion-table-container.collapsed{
     max-height: 0;
@@ -404,6 +401,7 @@ nav .hamburger .line:nth-child(3){
 .rotate{
     transform: rotate(180deg);
 }
+
 
 
 .plans-dropdown-section .accordion .accordion-header{
@@ -439,10 +437,12 @@ nav .hamburger .line:nth-child(3){
     padding: 0 50px;
     border-spacing: 0;
     min-height: 120vh;
+    position: relative;
 }
 .plans-dropdown-section .accordion-header .ch-d{
     transition: all 0.7s ease;
 }
+
 .plans-dropdown-section .accordion  table th{
     font-size: 36px;
     text-align: center;  
@@ -453,19 +453,24 @@ nav .hamburger .line:nth-child(3){
     text-align: center;
     border-bottom: 1px solid rgba(128, 128, 128, 0.496);
     padding: 30px 0px;
-   
+  
 }
 
 .plans-dropdown-section .accordion , th, td{
    padding: 10px 60px;
 }
-.plans-dropdown-section .accordion .day td{
-   text-align: center;
-    font-size: 24px;
+.plans-dropdown-section .accordion tr th.day{
+  
+    font-size: 28px;
     font-weight: 700;
-    color: #e63c3c
+    color: #e63c3c;
+    width: 100%;
+  
+    
 }
-
+.plans-dropdown-section .accordion .day{
+  
+}
 
 .footer{
     display: flex;
@@ -611,7 +616,7 @@ nav .hamburger .line:nth-child(3){
         padding: 200px 0;
     }
     .training-plans-container{
-        max-width: 80%;
+        max-width: 95%;
     }
     .training-plans-container > h1{
         font-size: 46px;
@@ -630,7 +635,20 @@ nav .hamburger .line:nth-child(3){
     .plans-dropdown-section .accordion-header{
         margin-top: 50px;
     }
-     
+    /* .swiper-button-next i,
+    .swiper-button-prev i{
+        font-size: 84px;
+    }
+    .swiper-button-next i{
+        right: -65px;
+    }
+    .swiper-button-prev i{
+        left: -65px;
+    } */
+    .swiper-button-next i,
+    .swiper-button-prev i{
+        display: none;
+    }
 }
 @media screen and (max-width: 620px){
    
@@ -656,7 +674,12 @@ nav .hamburger .line:nth-child(3){
     .nav-links.active{
         top: 100%;
     }
-    
+    .plans-dropdown-section{
+         margin-top: 0;
+    }
+    .training-plans-container{
+        margin-bottom: 0;
+    }
     .plans-dropdown-section .accordion-body tr th{
         font-size: 20px;
      }
@@ -673,9 +696,7 @@ nav .hamburger .line:nth-child(3){
     .swiper-slide .level{
         width: 55%;
     }
-    .training-plans-container{
-        max-width: 78%;
-    }
+ 
     .plan-desc h1{
         font-size: 22px;
     }
@@ -686,10 +707,7 @@ nav .hamburger .line:nth-child(3){
     .swiper-slide{
         padding: 10px;
     }
-    .accordion{
-        margin: 0;
-      
-    }
+   
     .plans-dropdown-section .accordion-body tr th{
         font-size: 16px;
      }
@@ -706,9 +724,43 @@ nav .hamburger .line:nth-child(3){
       
     }
     .plans-dropdown-section .accordion .day td{
-        padding: 10px 0;
+        font-size: 14px;
+      
     }
-     
+   
+    .plans-dropdown-section .accordion-body{
+        padding: 0;
+       
+    }
+    .plans-dropdown-section .accordion{
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        
+    }
+    .plans-dropdown-section .accordion .accordion-header{
+        border-radius: 0;
+    }
+    .plans-dropdown-section .accordion-body{
+        border-radius: 0;
+       
+    }
+    .plans-dropdown-section .accordion-body.w{
+        border-radius: 0;
+        min-width: 200%;
+        
+    }
+    .plans-dropdown-section .accordion-body.w tr{
+        padding: 50px;
+    }
+   
+    .accordion-table-container{
+        overflow-x: auto;
+        width: 100%;
+    }
+    .training-plans-parameters-container p{
+        font-size: 22px;
+    }
 }
 
 /* height */
@@ -720,6 +772,9 @@ nav .hamburger .line:nth-child(3){
     .swiper-slide .plan-desc{
         height: 550px;
     }
+    
+}
+@media screen and (max-height: 950px){
     
 }
 
